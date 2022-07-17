@@ -1,0 +1,3703 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <School Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>School</Alias>
+        <ConnectionStringEncrypted>9FzNSEZKct35CE3M+5iiJ9HIwQ1FV0mka03oROGgaS/fFMvrVlCx3eJGjZzDhKRj3HCrjEUD8plFTyWEaoBte5Bw+6PIV/IJe0FZ3E5MNTvx0PcC2WnDgWlNIWxOhKR7jWCzSVsFGsU=</ConnectionStringEncrypted>
+        <Key>cb05daf88793465592b455de4940316d</Key>
+        <Name>School</Name>
+      </School>
+    </Databases>
+    <DataSources isList="true" count="11">
+      <Classes Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Classes</Alias>
+        <Columns isList="true" count="3">
+          <value>ORIGINAL,ID,ID,ID,System.Int32,_x0039_63350952ccb432fb72e5b0b877acd26</value>
+          <value>ORIGINAL,Name,Name,Name,System.String,_x0030_527d63a7fb24eee968b701ce18f8566</value>
+          <value>ORIGINAL,GradeID,GradeID,GradeID,System.Int32,b94b903e0ea342739f9b3c1f6a57607a</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>1209ccc7b50a4032b5c28bb6ae29a4cc</Key>
+        <Name>Classes</Name>
+        <NameInSource>School</NameInSource>
+        <Parameters isList="true" count="1">
+          <value>_x0040_classid,ClassID,8,0</value>
+        </Parameters>
+        <SqlCommand>select * from Classes
+where Classes.ID = @classid;</SqlCommand>
+      </Classes>
+      <Courses Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Courses</Alias>
+        <Columns isList="true" count="4">
+          <value>ID,System.Int32</value>
+          <value>Month,System.String</value>
+          <value>Year,System.String</value>
+          <value>SchoolID,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>a6924ac280a24a6eac047a3315df0944</Key>
+        <Name>Courses</Name>
+        <NameInSource>School</NameInSource>
+        <Parameters isList="true" count="1">
+          <value>_x0040_courseid,CourseID,8,0</value>
+        </Parameters>
+        <SqlCommand>select * from Courses
+where Courses.ID = @courseid;</SqlCommand>
+      </Courses>
+      <Grades Ref="5" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Grades</Alias>
+        <Columns isList="true" count="3">
+          <value>ORIGINAL,ID,ID,ID,System.Int32,_x0039_286068dfc8b460a889ab3d6a15901dd</value>
+          <value>ORIGINAL,Name,Name,Name,System.String,ccb27f1cf72d428db8edaeb73f24d886</value>
+          <value>ORIGINAL,SchoolID,SchoolID,SchoolID,System.Int32,_x0037_05301c06490457b8b97dee6772014c5</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>bf0b231c764c4ffd8f082efa7cd63c42</Key>
+        <Name>Grades</Name>
+        <NameInSource>School</NameInSource>
+        <Parameters isList="true" count="1">
+          <value>_x0040_schoolid,SchoolID,8,0</value>
+        </Parameters>
+        <SqlCommand>select * from Grades
+where Grades.SchoolID = @schoolid;</SqlCommand>
+      </Grades>
+      <Lessons Ref="6" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Lessons</Alias>
+        <Columns isList="true" count="5">
+          <value>ORIGINAL,ID,ID,ID,System.Int32,_x0038_bd987a407474b958e0b57a2d4bd75aa</value>
+          <value>ORIGINAL,Name,Name,Name,System.String,_x0038_2432291d08b4c9cab3d7224db36b9d5</value>
+          <value>ORIGINAL,NumberOfUnits,NumberOfUnits,NumberOfUnits,System.Int32,ac729a6925cc4ed4a93c83abc02e4514</value>
+          <value>ORIGINAL,GradeID,GradeID,GradeID,System.Int32,ab11f4a1439a4b169d8dd16d0ca2ad34</value>
+          <value>ORIGINAL,TeacherID,TeacherID,TeacherID,System.Int32,ad479ac2a97743f6b9cf6a71e34ba2e2</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>4e77225702a142b6957d493616d3a0c5</Key>
+        <Name>Lessons</Name>
+        <NameInSource>School</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from Lessons</SqlCommand>
+      </Lessons>
+      <Marks Ref="7" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Marks</Alias>
+        <Columns isList="true" count="4">
+          <value>ORIGINAL,StudentID,StudentID,StudentID,System.Int32,_x0030_f16ffc84718400cb8215cf57eb4ff1c</value>
+          <value>ORIGINAL,LessonID,LessonID,LessonID,System.Int32,_x0030_fea09d4945348488fe85a4788f9e601</value>
+          <value>ORIGINAL,CourseID,CourseID,CourseID,System.Int32,_x0034_0393a1ec34a4568934491ebe86cc044</value>
+          <value>ORIGINAL,Value,Value,Value,System.Single,c1e0284004bb444c9fdcebc831549647</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>e56aaa4b8edb46079c6852cc8823ccd3</Key>
+        <Name>Marks</Name>
+        <NameInSource>School</NameInSource>
+        <Parameters isList="true" count="1">
+          <value>_x0040_courseid,CourseID,8,0</value>
+        </Parameters>
+        <SqlCommand>select * from Marks
+where Marks.CourseID = @courseid</SqlCommand>
+      </Marks>
+      <Students Ref="8" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Students</Alias>
+        <Columns isList="true" count="7">
+          <value>ORIGINAL,ID,ID,ID,System.Int32,d1fa92aea0b34906ad5d288d0be49ec7</value>
+          <value>ORIGINAL,Firstname,Firstname,Firstname,System.String,_x0039_1235c45fb454a55aa0642a1e79ee377</value>
+          <value>ORIGINAL,Lastname,Lastname,Lastname,System.String,_x0039_1dd019643984796aee9d6c630935fa0</value>
+          <value>ORIGINAL,NationalCode,NationalCode,NationalCode,System.String,_x0033_7f4cae5592a49fba33b55808a3d2a6d</value>
+          <value>ORIGINAL,ClassID,ClassID,ClassID,System.Int32,dd92d504e29f4296bdca499680dd0d45</value>
+          <value>ORIGINAL,PhotoAddress,PhotoAddress,PhotoAddress,System.String,_x0030_1db9e02937145f0b704a8a23501f45c</value>
+          <value>ORIGINAL,Fathername,Fathername,Fathername,System.String,_x0032_ab3ce2baefc4e39b861892421db89bd</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>3053a160504b46e4a644cb731d4950d1</Key>
+        <Name>Students</Name>
+        <NameInSource>School</NameInSource>
+        <Parameters isList="true" count="1">
+          <value>_x0040_classid,ClassID,8,0</value>
+        </Parameters>
+        <SqlCommand>select * from Students
+where Students.ClassID = @classid;</SqlCommand>
+      </Students>
+      <Teachers Ref="9" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Teachers</Alias>
+        <Columns isList="true" count="4">
+          <value>ORIGINAL,ID,ID,ID,System.Int32,_x0030_36826fe30764355961e7c87e9576f8d</value>
+          <value>ORIGINAL,Firstname,Firstname,Firstname,System.String,_x0039_d7aad04096445cc9b530951840decba</value>
+          <value>ORIGINAL,Lastname,Lastname,Lastname,System.String,_x0032_637b6dc230a46a79e408227ba4c0a5c</value>
+          <value>ORIGINAL,SchoolID,SchoolID,SchoolID,System.Int32,a3e8957316b44199b4817d63e311a1a0</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>271bf3f47fff4d52af50c1b65bfe0bd8</Key>
+        <Name>Teachers</Name>
+        <NameInSource>School</NameInSource>
+        <Parameters isList="true" count="1">
+          <value>_x0040_schoolid,SchoolID,8,0</value>
+        </Parameters>
+        <SqlCommand>select * from Teachers
+where Teachers.SchoolID = @schoolid;</SqlCommand>
+      </Teachers>
+      <GetSchoolInfo Ref="10" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>GetSchoolInfo</Alias>
+        <Columns isList="true" count="8">
+          <value>ORIGINAL,ID,ID,ID,System.Int32,_x0031_52a2871caeb441bbd3f643deeb2486c</value>
+          <value>ORIGINAL,Name,Name,Name,System.String,_x0035_eeda5c315bc457aad94397cb261f2fd</value>
+          <value>ORIGINAL,Area,Area,Area,System.String,_x0039_c376034a64b4233852afb35dea80e84</value>
+          <value>ORIGINAL,Section,Section,Section,System.String,_x0039_14de168f54e4afba3a2f3409484f020</value>
+          <value>ORIGINAL,City,City,City,System.String,_x0032_842f774d7d040cda77d8c80b4a24374</value>
+          <value>ORIGINAL,Province,Province,Province,System.String,b25f62303ab0444bad36a2bc218e8d4a</value>
+          <value>ORIGINAL,Manager,Manager,Manager,System.String,_x0039_dd63ea6d1f84a3c934bb134326d15f7</value>
+          <value>ORIGINAL,Executive,Executive,Executive,System.String,_x0032_2b1e869bce94526af6ba0efb4ee28a8</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>c57ecc47753f471ab47b50cc752e0859</Key>
+        <Name>GetSchoolInfo</Name>
+        <NameInSource>School</NameInSource>
+        <Parameters isList="true" count="1">
+          <value>_x0040_schoolid,SchoolID,8,0</value>
+        </Parameters>
+        <SqlCommand>GetSchoolInfo</SqlCommand>
+        <Type>StoredProcedure</Type>
+      </GetSchoolInfo>
+      <RanksAveragesInGrade Ref="11" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>RanksAveragesInGrade</Alias>
+        <Columns isList="true" count="3">
+          <value>ORIGINAL,StudentID,StudentID,StudentID,System.Int32,_x0030_345f171f1c34a4db90f766bdd74e493</value>
+          <value>ORIGINAL,Average,Average,Average,System.Double,f028ccc76aaf4b8cb1382daa4b2bf87e</value>
+          <value>ORIGINAL,Rank,Rank,Rank,System.Int64,_x0032_fc3b297f79f4c97936117947d21a18d</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>53416e4fb60d4411a492c4f54a1fe778</Key>
+        <Name>RanksAveragesInGrade</Name>
+        <NameInSource>School</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_courseid,CourseID,8,0,6e26291246644ea6bcf026f31bd6fa28</value>
+          <value>_x0040_gradeid,GradeID,8,0,bfc642fbb1b446cd9f637d2d1c2587e1</value>
+        </Parameters>
+        <SqlCommand>RanksAveragesInGrade</SqlCommand>
+        <Type>StoredProcedure</Type>
+      </RanksAveragesInGrade>
+      <RanksAveragesInClass Ref="12" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>RanksAveragesInClass</Alias>
+        <Columns isList="true" count="3">
+          <value>ORIGINAL,StudentID,StudentID,StudentID,System.Int32,_x0039_0b15cddd5d643da8468b62b6b8279cb</value>
+          <value>ORIGINAL,Average,Average,Average,System.Double,e6db60a07193489dac8ece739088307c</value>
+          <value>ORIGINAL,Rank,Rank,Rank,System.Int64,_x0030_7a2f90a31ff4feaad32a09c8e4c2489</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>4e17c17f15bf40bca4cb7a93a5b4fd4d</Key>
+        <Name>RanksAveragesInClass</Name>
+        <NameInSource>School</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_classid,ClassID,8,0,6073c2ec18a3414baecc5c69959b0bb6</value>
+          <value>_x0040_courseid,CourseID,8,0,56727aab44b64e9d82e8886dd88ca3a7</value>
+        </Parameters>
+        <SqlCommand>RanksAveragesInClass</SqlCommand>
+        <Type>StoredProcedure</Type>
+      </RanksAveragesInClass>
+      <RanksInLesson Ref="13" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>RanksInLesson</Alias>
+        <Columns isList="true" count="3">
+          <value>ORIGINAL,StudentID,StudentID,StudentID,System.Int32,c74f3c7e6d5d4f569131025f607f4693</value>
+          <value>ORIGINAL,LessonID,LessonID,LessonID,System.Int32,_x0035_6d53a6b86d347738101891d09ba5f06</value>
+          <value>ORIGINAL,Rank,Rank,Rank,System.Int32,a87358e9d2ed46178511ad609f7f87a0</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>a66268c09aad4fb9bdb9a5e779ce0edf</Key>
+        <Name>RanksInLesson</Name>
+        <NameInSource>School</NameInSource>
+        <Parameters isList="true" count="2">
+          <value>_x0040_classid,ClassID,8,0,44822504916f466f9e0478ba8daa0281</value>
+          <value>_x0040_courseid,CourseID,8,0,c02808f09d2f4940ab88dc306f6fb011</value>
+        </Parameters>
+        <SqlCommand>RanksInLesson</SqlCommand>
+        <Type>StoredProcedure</Type>
+      </RanksInLesson>
+    </DataSources>
+    <Relations isList="true" count="13">
+      <Grade_Class Ref="14" type="DataRelation" isKey="true">
+        <Alias>Grade_Class</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>GradeID</value>
+        </ChildColumns>
+        <ChildSource isRef="3" />
+        <Dictionary isRef="1" />
+        <Key>8cf188ee6781466693cd59c0f03eaf80</Key>
+        <Name>Grade_Class</Name>
+        <NameInSource>Relation</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>ID</value>
+        </ParentColumns>
+        <ParentSource isRef="5" />
+      </Grade_Class>
+      <School_Course Ref="15" type="DataRelation" isKey="true">
+        <Alias>School_Course</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>SchoolID</value>
+        </ChildColumns>
+        <ChildSource isRef="4" />
+        <Dictionary isRef="1" />
+        <Name>School_Course</Name>
+        <NameInSource>Relation2</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>ID</value>
+        </ParentColumns>
+        <ParentSource isRef="10" />
+      </School_Course>
+      <School_Grade Ref="16" type="DataRelation" isKey="true">
+        <Alias>School_Grade</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>SchoolID</value>
+        </ChildColumns>
+        <ChildSource isRef="5" />
+        <Dictionary isRef="1" />
+        <Key>685f1af3f45d4627b6dc8a64a64047c1</Key>
+        <Name>School_Grade</Name>
+        <NameInSource>Relation3</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>ID</value>
+        </ParentColumns>
+        <ParentSource isRef="10" />
+      </School_Grade>
+      <Grade_Lesson Ref="17" type="DataRelation" isKey="true">
+        <Alias>Grade_Lesson</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>GradeID</value>
+        </ChildColumns>
+        <ChildSource isRef="6" />
+        <Dictionary isRef="1" />
+        <Key>f72aaba8ff9a4021ad220e4c831163f6</Key>
+        <Name>Grade_Lesson</Name>
+        <NameInSource>Relation4</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>ID</value>
+        </ParentColumns>
+        <ParentSource isRef="5" />
+      </Grade_Lesson>
+      <Teacher_Lesson Ref="18" type="DataRelation" isKey="true">
+        <Alias>Teacher_Lesson</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>TeacherID</value>
+        </ChildColumns>
+        <ChildSource isRef="6" />
+        <Dictionary isRef="1" />
+        <Key>df79ec5590b04ee3ae4e31ee5653757b</Key>
+        <Name>Teacher_Lesson</Name>
+        <NameInSource>Relation5</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>ID</value>
+        </ParentColumns>
+        <ParentSource isRef="9" />
+      </Teacher_Lesson>
+      <Student_Mark Ref="19" type="DataRelation" isKey="true">
+        <Alias>Student_Mark</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>StudentID</value>
+        </ChildColumns>
+        <ChildSource isRef="7" />
+        <Dictionary isRef="1" />
+        <Key>0bdfae04a8fb48d6a3a5a56fd2428ebe</Key>
+        <Name>Student_Mark</Name>
+        <NameInSource>Relation6</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>ID</value>
+        </ParentColumns>
+        <ParentSource isRef="8" />
+      </Student_Mark>
+      <Lesson_Mark Ref="20" type="DataRelation" isKey="true">
+        <Alias>Lesson_Mark</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>LessonID</value>
+        </ChildColumns>
+        <ChildSource isRef="7" />
+        <Dictionary isRef="1" />
+        <Key>ecfbd45610ae4d479f13e12be5f9b67c</Key>
+        <Name>Lesson_Mark</Name>
+        <NameInSource>Relation7</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>ID</value>
+        </ParentColumns>
+        <ParentSource isRef="6" />
+      </Lesson_Mark>
+      <Course_Mark Ref="21" type="DataRelation" isKey="true">
+        <Alias>Course_Mark</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>CourseID</value>
+        </ChildColumns>
+        <ChildSource isRef="7" />
+        <Dictionary isRef="1" />
+        <Key>cebce6d7987d40f691299ecb9859fb0a</Key>
+        <Name>Course_Mark</Name>
+        <NameInSource>Relation8</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>ID</value>
+        </ParentColumns>
+        <ParentSource isRef="4" />
+      </Course_Mark>
+      <Class_Student Ref="22" type="DataRelation" isKey="true">
+        <Alias>Class_Student</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>ClassID</value>
+        </ChildColumns>
+        <ChildSource isRef="8" />
+        <Dictionary isRef="1" />
+        <Key>d034fa0f8ef24e11b303244279744cfd</Key>
+        <Name>Class_Student</Name>
+        <NameInSource>Relation9</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>ID</value>
+        </ParentColumns>
+        <ParentSource isRef="3" />
+      </Class_Student>
+      <School_Teacher Ref="23" type="DataRelation" isKey="true">
+        <Alias>School_Teacher</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>SchoolID</value>
+        </ChildColumns>
+        <ChildSource isRef="9" />
+        <Dictionary isRef="1" />
+        <Key>115a08bbf452449bb2c3a5aca8f2727e</Key>
+        <Name>School_Teacher</Name>
+        <NameInSource>Relation10</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>ID</value>
+        </ParentColumns>
+        <ParentSource isRef="10" />
+      </School_Teacher>
+      <Student_RanksAveragesInGrade Ref="24" type="DataRelation" isKey="true">
+        <Alias>Student_RanksAveragesInGrade</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>ID</value>
+        </ChildColumns>
+        <ChildSource isRef="8" />
+        <Dictionary isRef="1" />
+        <Key>df41f98514744579a1a23b40cdcd98b3</Key>
+        <Name>Student_RanksAveragesInGrade</Name>
+        <NameInSource>Relation11</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>StudentID</value>
+        </ParentColumns>
+        <ParentSource isRef="11" />
+      </Student_RanksAveragesInGrade>
+      <RanksAveragesInClass_Student Ref="25" type="DataRelation" isKey="true">
+        <Alias>RanksAveragesInClass_Student</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>ID</value>
+        </ChildColumns>
+        <ChildSource isRef="8" />
+        <Dictionary isRef="1" />
+        <Name>RanksAveragesInClass_Student</Name>
+        <NameInSource>Relation12</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>StudentID</value>
+        </ParentColumns>
+        <ParentSource isRef="12" />
+      </RanksAveragesInClass_Student>
+      <RankInLesson_Mark Ref="26" type="DataRelation" isKey="true">
+        <Alias>RankInLesson_Mark</Alias>
+        <ChildColumns isList="true" count="2">
+          <value>StudentID</value>
+          <value>LessonID</value>
+        </ChildColumns>
+        <ChildSource isRef="7" />
+        <Dictionary isRef="1" />
+        <Name>RankInLesson_Mark</Name>
+        <NameInSource>Relation13</NameInSource>
+        <ParentColumns isList="true" count="2">
+          <value>StudentID</value>
+          <value>LessonID</value>
+        </ParentColumns>
+        <ParentSource isRef="13" />
+      </RankInLesson_Mark>
+    </Relations>
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="4">
+      <value>,SchoolID,SchoolID,,System.Int32,_x0032_,False,False,False,False,,_x0038_f31ec6ea2384d3f9f0be5e5be3fca1e,True</value>
+      <value>,CourseID,CourseID,,System.Int32,_x0031_,False,False,False,False,,_x0036_566eb7cf9fd4231a8307cac9ea7bca1,True</value>
+      <value>,ClassID,ClassID,,System.Int32,_x0031_,False,False,False,False,,ca4348057eca40c4bf7dcd7ff7c02ed5,True</value>
+      <value>,GradeID,GradeID,,System.Int32,_x0031_,False,False,False,False,,_x0031_aca133efa2e45de9aa611f6e3852c42,True</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>e510c0afbbbe40758a9668948ec16fb7</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="27" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="4">
+        <DataBand1 Ref="28" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,0.2,7.87,1.3</ClientRectangle>
+          <Components isList="true" count="2">
+            <Panel1 Ref="29" type="Panel" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,5.8,1.2</ClientRectangle>
+              <Components isList="true" count="15">
+                <Image1 Ref="30" type="Image" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0.1,0.1,1,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <IconColor>68, 114, 196</IconColor>
+                  <ImageURL>C:\Users\20aak\AppData\Roaming\StudentImages\{Students.PhotoAddress}</ImageURL>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Image1</Name>
+                  <Page isRef="27" />
+                  <Parent isRef="29" />
+                  <Stretch>True</Stretch>
+                </Image1>
+                <Text1 Ref="31" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>4.9,0,0.8,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>P - IRAN Sans,12</Font>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text1</Name>
+                  <Page isRef="27" />
+                  <Parent isRef="29" />
+                  <Text>نام :</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text1>
+                <Text2 Ref="32" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>4.9,0.3,0.8,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>P - IRAN Sans,12</Font>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text2</Name>
+                  <Page isRef="27" />
+                  <Parent isRef="29" />
+                  <Text>نام خانوادگی :</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text2>
+                <Text3 Ref="33" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>4.9,0.6,0.8,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>P - IRAN Sans,12</Font>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text3</Name>
+                  <Page isRef="27" />
+                  <Parent isRef="29" />
+                  <Text>نام پدر :</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text3>
+                <Text4 Ref="34" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>4.9,0.9,0.8,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>P - IRAN Sans,12</Font>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text4</Name>
+                  <Page isRef="27" />
+                  <Parent isRef="29" />
+                  <Text>کد ملی :</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text4>
+                <Text5 Ref="35" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>3.4,0,1.5,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>P - IRAN Sans,12</Font>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text5</Name>
+                  <Page isRef="27" />
+                  <Parent isRef="29" />
+                  <Text>{Students.Firstname}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+                  <Type>DataColumn</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text5>
+                <Text6 Ref="36" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>3.4,0.3,1.5,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>P - IRAN Sans,12</Font>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text6</Name>
+                  <Page isRef="27" />
+                  <Parent isRef="29" />
+                  <Text>{Students.Lastname}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+                  <Type>DataColumn</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text6>
+                <Text7 Ref="37" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>3.4,0.6,1.5,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>P - IRAN Sans,12</Font>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text7</Name>
+                  <Page isRef="27" />
+                  <Parent isRef="29" />
+                  <Text>{Students.Fathername}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+                  <Type>DataColumn</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text7>
+                <Text8 Ref="38" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>3.4,0.9,1.5,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>P - IRAN Sans,12</Font>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text8</Name>
+                  <Page isRef="27" />
+                  <Parent isRef="29" />
+                  <Text>{Students.NationalCode}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+                  <Type>DataColumn</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text8>
+                <Text9 Ref="39" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>2.6,0,0.8,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>P - IRAN Sans,12</Font>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text9</Name>
+                  <Page isRef="27" />
+                  <Parent isRef="29" />
+                  <Text>دوره تحصیلی :</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text9>
+                <Text10 Ref="40" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>1.2,0,1.4,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>P - IRAN Sans,12</Font>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text10</Name>
+                  <Page isRef="27" />
+                  <Parent isRef="29" />
+                  <Text>{Courses.Month} {Courses.Year}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text10>
+                <Text11 Ref="41" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>2.6,0.3,0.8,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>P - IRAN Sans,12</Font>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text11</Name>
+                  <Page isRef="27" />
+                  <Parent isRef="29" />
+                  <Text>پایه :</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text11>
+                <Text12 Ref="42" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>1.2,0.3,1.4,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>P - IRAN Sans,12</Font>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text12</Name>
+                  <Page isRef="27" />
+                  <Parent isRef="29" />
+                  <Text>{Students.Class_Student.Grade_Class.Name}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+                  <Type>DataColumn</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text12>
+                <Text13 Ref="43" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>2.6,0.6,0.8,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>P - IRAN Sans,12</Font>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text13</Name>
+                  <Page isRef="27" />
+                  <Parent isRef="29" />
+                  <Text>کلاس :</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text13>
+                <Text16 Ref="44" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>1.2,0.6,1.4,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>P - IRAN Sans,12</Font>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text16</Name>
+                  <Page isRef="27" />
+                  <Parent isRef="29" />
+                  <Text>{Students.Class_Student.Name}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+                  <Type>DataColumn</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text16>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Name>Panel1</Name>
+              <Page isRef="27" />
+              <Parent isRef="28" />
+            </Panel1>
+            <Panel2 Ref="45" type="Panel" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.9,0,1.9,1.2</ClientRectangle>
+              <Components isList="true" count="4">
+                <Text14 Ref="46" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,0,1.9,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>P - IRAN Sans,12,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text14</Name>
+                  <Page isRef="27" />
+                  <Parent isRef="45" />
+                  <Text>آموزشگاه {Students.Class_Student.Grade_Class.School_Grade.Name}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text14>
+                <Text15 Ref="47" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,0.3,1.9,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>P - IRAN Sans,12</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text15</Name>
+                  <Page isRef="27" />
+                  <Parent isRef="45" />
+                  <Text>استان {Students.Class_Student.Grade_Class.School_Grade.Province}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text15>
+                <Text17 Ref="48" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,0.6,1.9,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>P - IRAN Sans,12</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text17</Name>
+                  <Page isRef="27" />
+                  <Parent isRef="45" />
+                  <Text>شهر {Students.Class_Student.Grade_Class.School_Grade.City} {Students.Class_Student.Grade_Class.School_Grade.Area}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text17>
+                <Text18 Ref="49" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,0.9,1.9,0.3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>P - IRAN Sans,12</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text18</Name>
+                  <Page isRef="27" />
+                  <Parent isRef="45" />
+                  <Text>{Students.Class_Student.Grade_Class.School_Grade.Section}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+                  <Type>DataColumn</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text18>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Name>Panel2</Name>
+              <Page isRef="27" />
+              <Parent isRef="28" />
+            </Panel2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>Students</DataSourceName>
+          <Expressions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <Name>DataBand1</Name>
+          <Page isRef="27" />
+          <Parent isRef="27" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+        <ColumnHeaderBand1 Ref="50" type="Stimulsoft.Report.Components.StiColumnHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,1.9,7.87,0.3</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text19 Ref="51" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.4,0,0.4,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="27" />
+              <Parent isRef="50" />
+              <Text>ردیف</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text19>
+            <Text20 Ref="52" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.2,0,3.2,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="27" />
+              <Parent isRef="50" />
+              <Text>نام درس</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text20>
+            <Text21 Ref="53" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.5,0,0.7,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="27" />
+              <Parent isRef="50" />
+              <Text>تعداد واحد</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text21>
+            <Text22 Ref="54" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.5,0,2,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="27" />
+              <Parent isRef="50" />
+              <Text>نام دبیر</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text22>
+            <Text23 Ref="55" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,0,0.7,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="27" />
+              <Parent isRef="50" />
+              <Text>نمره</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text23>
+            <Text24 Ref="56" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,0.8,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="27" />
+              <Parent isRef="50" />
+              <Text>رتبه در درس</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text24>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>ColumnHeaderBand1</Name>
+          <Page isRef="27" />
+          <Parent isRef="27" />
+        </ColumnHeaderBand1>
+        <DataBand2 Ref="57" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,2.6,7.87,0.3</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text25 Ref="58" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.4,0,0.4,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="27" />
+              <Parent isRef="57" />
+              <Text>{Line}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>SystemVariables</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text25>
+            <Text26 Ref="59" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.2,0,3.2,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="27" />
+              <Parent isRef="57" />
+              <Text>{Marks.Lesson_Mark.Name}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text26>
+            <Text27 Ref="60" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.5,0,0.7,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text27</Name>
+              <Page isRef="27" />
+              <Parent isRef="57" />
+              <Text>{Marks.Lesson_Mark.NumberOfUnits}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text27>
+            <Text28 Ref="61" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.5,0,2,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text28</Name>
+              <Page isRef="27" />
+              <Parent isRef="57" />
+              <Text>{Marks.Lesson_Mark.Teacher_Lesson.Firstname} {Marks.Lesson_Mark.Teacher_Lesson.Lastname}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text28>
+            <Text29 Ref="62" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,0,0.7,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="27" />
+              <Parent isRef="57" />
+              <Text>{Marks.Value}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text29>
+            <Text30 Ref="63" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,0.8,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="27" />
+              <Parent isRef="57" />
+              <Text>{Marks.RankInLesson_Mark.Rank}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text30>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName>Relation6</DataRelationName>
+          <DataSourceName>Marks</DataSourceName>
+          <Expressions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <MasterComponent isRef="28" />
+          <Name>DataBand2</Name>
+          <Page isRef="27" />
+          <Parent isRef="27" />
+          <Sort isList="true" count="0" />
+        </DataBand2>
+        <FooterBand1 Ref="64" type="FooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,3.3,7.87,0.8</ClientRectangle>
+          <Components isList="true" count="12">
+            <Text31 Ref="65" type="Text" isKey="true">
+              <Border>Top, Left, Right;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.8,0.1,1,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="27" />
+              <Parent isRef="64" />
+              <Text>معدل</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text31>
+            <Text32 Ref="66" type="Text" isKey="true">
+              <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.8,0.4,1,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text32</Name>
+              <Page isRef="27" />
+              <Parent isRef="64" />
+              <Text>{Students.Student_RanksAveragesInGrade.Average}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="67" type="NumberFormat" isKey="true">
+                <DecimalDigits>2</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <State>DecimalDigits</State>
+              </TextFormat>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text32>
+            <Text33 Ref="68" type="Text" isKey="true">
+              <Border>Top, Left, Right;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.8,0.1,1,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text33</Name>
+              <Page isRef="27" />
+              <Parent isRef="64" />
+              <Text>جمع نمرات</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text33>
+            <Text34 Ref="69" type="Text" isKey="true">
+              <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.8,0.4,1,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text34</Name>
+              <Page isRef="27" />
+              <Parent isRef="64" />
+              <Text>{Sum(DataBand2,Marks.Value)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Totals</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text34>
+            <Text35 Ref="70" type="Text" isKey="true">
+              <Border>Top, Left, Right;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.8,0.1,1,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text35</Name>
+              <Page isRef="27" />
+              <Parent isRef="64" />
+              <Text>رتبه در کلاس</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text35>
+            <Text36 Ref="71" type="Text" isKey="true">
+              <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.8,0.4,1,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text36</Name>
+              <Page isRef="27" />
+              <Parent isRef="64" />
+              <Text>{Marks.Student_Mark.RanksAveragesInClass_Student.Rank}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text36>
+            <Text37 Ref="72" type="Text" isKey="true">
+              <Border>Top, Left, Right;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.8,0.1,1,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text37</Name>
+              <Page isRef="27" />
+              <Parent isRef="64" />
+              <Text>رتبه در پایه</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text37>
+            <Text38 Ref="73" type="Text" isKey="true">
+              <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.8,0.4,1,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text38</Name>
+              <Page isRef="27" />
+              <Parent isRef="64" />
+              <Text>{Students.Student_RanksAveragesInGrade.Rank}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text38>
+            <Text39 Ref="74" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.6,0.1,1.1,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text39</Name>
+              <Page isRef="27" />
+              <Parent isRef="64" />
+              <Text>مسئول ثبت نمرات :</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text39>
+            <Text40 Ref="75" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.1,2.6,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text40</Name>
+              <Page isRef="27" />
+              <Parent isRef="64" />
+              <Text>{Students.Class_Student.Grade_Class.School_Grade.Executive}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text40>
+            <Text41 Ref="76" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.6,0.4,1.1,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text41</Name>
+              <Page isRef="27" />
+              <Parent isRef="64" />
+              <Text>مدیر آموزشگاه :</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text41>
+            <Text42 Ref="77" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.4,2.6,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>P - IRAN Sans,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text42</Name>
+              <Page isRef="27" />
+              <Parent isRef="64" />
+              <Text>{Students.Class_Student.Grade_Class.School_Grade.Manager}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text42>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>FooterBand1</Name>
+          <Page isRef="27" />
+          <Parent isRef="27" />
+        </FooterBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Expressions isList="true" count="0" />
+      <Guid>693388e02eb94a98b89dddb78c2f375c</Guid>
+      <Margins>0.2,0.2,0.2,0.2</Margins>
+      <Name>Page1</Name>
+      <PageHeight>11.69</PageHeight>
+      <PageWidth>8.27</PageWidth>
+      <PaperSize>A4</PaperSize>
+      <Report isRef="0" />
+    </Page1>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>7/17/2022 2:11:28 PM</ReportChanged>
+  <ReportCreated>7/17/2022 12:02:18 PM</ReportCreated>
+  <ReportFile>C:\Users\20aak\OneDrive\Desktop\Report.mrt</ReportFile>
+  <ReportGuid>70eac8ae7806416bb3f9080a1c6c9f0a</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Inches</ReportUnit>
+  <ReportVersion>2022.1.1.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+        public Stimulsoft.Report.Dictionary.StiDataRelation ParentRanksAveragesInGrade_Mark;
+        public Stimulsoft.Report.Dictionary.StiDataRelation ParentSchool_Teacher;
+        public Stimulsoft.Report.Dictionary.StiDataRelation ParentClass_Student;
+        public Stimulsoft.Report.Dictionary.StiDataRelation ParentCourse_Mark;
+        public Stimulsoft.Report.Dictionary.StiDataRelation ParentLesson_Mark;
+        public Stimulsoft.Report.Dictionary.StiDataRelation ParentStudent_Mark;
+        public Stimulsoft.Report.Dictionary.StiDataRelation ParentTeacher_Lesson;
+        public Stimulsoft.Report.Dictionary.StiDataRelation ParentGrade_Lesson;
+        public Stimulsoft.Report.Dictionary.StiDataRelation ParentSchool_Grade;
+        public Stimulsoft.Report.Dictionary.StiDataRelation ParentSchool_Course;
+        public Stimulsoft.Report.Dictionary.StiDataRelation ParentGrade_Class;
+        public int SchoolID;
+        public int CourseID;
+        public int ClassID;
+        public Stimulsoft.Report.Components.StiPage Page1;
+        public Stimulsoft.Report.Components.StiDataBand DataBand1;
+        public Stimulsoft.Report.Components.StiPanel Panel1;
+        public Stimulsoft.Report.Components.StiImage Image1;
+        public Stimulsoft.Report.Components.StiText Text1;
+        public Stimulsoft.Report.Components.StiText Text2;
+        public Stimulsoft.Report.Components.StiText Text3;
+        public Stimulsoft.Report.Components.StiText Text4;
+        public Stimulsoft.Report.Components.StiText Text5;
+        public Stimulsoft.Report.Components.StiText Text6;
+        public Stimulsoft.Report.Components.StiText Text7;
+        public Stimulsoft.Report.Components.StiText Text8;
+        public Stimulsoft.Report.Components.StiText Text9;
+        public Stimulsoft.Report.Components.StiText Text10;
+        public Stimulsoft.Report.Components.StiText Text11;
+        public Stimulsoft.Report.Components.StiText Text12;
+        public Stimulsoft.Report.Components.StiText Text13;
+        public Stimulsoft.Report.Components.StiText Text16;
+        public Stimulsoft.Report.Components.StiPanel Panel2;
+        public Stimulsoft.Report.Components.StiText Text14;
+        public Stimulsoft.Report.Components.StiText Text15;
+        public Stimulsoft.Report.Components.StiText Text17;
+        public Stimulsoft.Report.Components.StiText Text18;
+        public Stimulsoft.Report.Components.StiColumnHeaderBand ColumnHeaderBand1;
+        public Stimulsoft.Report.Components.StiText Text19;
+        public Stimulsoft.Report.Components.StiText Text20;
+        public Stimulsoft.Report.Components.StiText Text21;
+        public Stimulsoft.Report.Components.StiText Text22;
+        public Stimulsoft.Report.Components.StiText Text23;
+        public Stimulsoft.Report.Components.StiText Text24;
+        public Stimulsoft.Report.Components.StiDataBand DataBand2;
+        public Stimulsoft.Report.Components.StiText Text25;
+        public Stimulsoft.Report.Components.StiText Text26;
+        public Stimulsoft.Report.Components.StiText Text27;
+        public Stimulsoft.Report.Components.StiText Text28;
+        public Stimulsoft.Report.Components.StiText Text29;
+        public Stimulsoft.Report.Components.StiText Text30;
+        public ClassesDataSource Classes;
+        public CoursesDataSource Courses;
+        public GradesDataSource Grades;
+        public LessonsDataSource Lessons;
+        public MarksDataSource Marks;
+        public StudentsDataSource Students;
+        public TeachersDataSource Teachers;
+        public GetSchoolInfoDataSource GetSchoolInfo;
+        public RanksAveragesInGradeDataSource RanksAveragesInGrade;
+        
+        public void Image1__GetImageData(object sender, Stimulsoft.Report.Events.StiGetImageDataEventArgs e)
+        {
+            // CheckerInfo: ImageData Image1
+            e.Value = Image.FromFile("C:\\Users\\20aak\\AppData\\Local\\StudentImages\\" + Students.PhotoAddress);
+        }
+        
+        public void Text1__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text1
+            e.Value = "نام :";
+        }
+        
+        public void Text2__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text2
+            e.Value = "نام خانوادگی :";
+        }
+        
+        public void Text3__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text3
+            e.Value = "نام پدر :";
+        }
+        
+        public void Text4__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text4
+            e.Value = "کد ملی :";
+        }
+        
+        public void Text5__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text5
+            e.Value = ToString(sender, Students.Firstname, true);
+        }
+        
+        public void Text6__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text6
+            e.Value = ToString(sender, Students.Lastname, true);
+        }
+        
+        public void Text7__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text7
+            e.Value = ToString(sender, Students.Fathername, true);
+        }
+        
+        public void Text8__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text8
+            e.Value = ToString(sender, Students.NationalCode, true);
+        }
+        
+        public void Text9__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text9
+            e.Value = "دوره تحصیلی :";
+        }
+        
+        public void Text10__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text10
+            e.Value = ToString(sender, Courses.Month, true) + " " + ToString(sender, Courses.Year, true);
+        }
+        
+        public void Text11__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text11
+            e.Value = "پایه :";
+        }
+        
+        public void Text12__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text12
+            e.Value = ToString(sender, Students.Class_Student.Grade_Class.Name, true);
+        }
+        
+        public void Text13__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text13
+            e.Value = "کلاس :";
+        }
+        
+        public void Text16__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text16
+            e.Value = ToString(sender, Students.Class_Student.Name, true);
+        }
+        
+        public void Text14__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text14
+            e.Value = "آموزشگاه " + ToString(sender, Students.Class_Student.Grade_Class.School_Grade.Name, true);
+        }
+        
+        public void Text15__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text15
+            e.Value = "استان " + ToString(sender, Students.Class_Student.Grade_Class.School_Grade.Province, true);
+        }
+        
+        public void Text17__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text17
+            e.Value = "شهر " + ToString(sender, Students.Class_Student.Grade_Class.School_Grade.City, true) + " " + ToString(sender, Students.Class_Student.Grade_Class.School_Grade.Area, true);
+        }
+        
+        public void Text18__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text18
+            e.Value = ToString(sender, Students.Class_Student.Grade_Class.School_Grade.Section, true);
+        }
+        
+        public void Text19__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text19
+            e.Value = "ردیف";
+        }
+        
+        public void Text20__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text20
+            e.Value = "نام درس";
+        }
+        
+        public void Text21__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text21
+            e.Value = "تعداد واحد";
+        }
+        
+        public void Text22__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text22
+            e.Value = "نام دبیر";
+        }
+        
+        public void Text23__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text23
+            e.Value = "نمره";
+        }
+        
+        public void Text24__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text24
+            e.Value = "رتبه در درس";
+        }
+        
+        public void Text25__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text25
+            e.Value = ToString(sender, Line, true);
+        }
+        
+        public void Text26__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text26
+            e.Value = ToString(sender, Marks.Lesson_Mark.Name, true);
+        }
+        
+        public void Text27__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text27
+            e.Value = ToString(sender, Marks.Lesson_Mark.NumberOfUnits, true);
+        }
+        
+        public void Text28__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text28
+            e.Value = ToString(sender, Marks.Lesson_Mark.Teacher_Lesson.Firstname, true) + " " + ToString(sender, Marks.Lesson_Mark.Teacher_Lesson.Lastname, true);
+        }
+        
+        public void Text29__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text29
+            e.Value = ToString(sender, Marks.Value, true);
+        }
+        
+        public void Text30__GetValue(object sender, Stimulsoft.Report.Events.StiGetValueEventArgs e)
+        {
+            // CheckerInfo: Text Text30
+            e.Value = ToString(sender, Marks.RanksAveragesInGrade_Mark.Rank, true);
+        }
+        
+        public void CheckEndRenderRuntimes__EndRender(object sender, System.EventArgs e)
+        {
+            Stimulsoft.Report.Components.StiSimpleText.CheckEndRenderRuntimes(this);
+        }
+        
+        private void InitializeComponent()
+        {
+            this.RanksAveragesInGrade = new RanksAveragesInGradeDataSource();
+            this.GetSchoolInfo = new GetSchoolInfoDataSource();
+            this.Teachers = new TeachersDataSource();
+            this.Students = new StudentsDataSource();
+            this.Marks = new MarksDataSource();
+            this.Lessons = new LessonsDataSource();
+            this.Grades = new GradesDataSource();
+            this.Courses = new CoursesDataSource();
+            this.Classes = new ClassesDataSource();
+            this.ParentRanksAveragesInGrade_Mark = new Stimulsoft.Report.Dictionary.StiDataRelation("Relation11", "RanksAveragesInGrade_Mark", "RanksAveragesInGrade_Mark", this.RanksAveragesInGrade, this.Marks, new string[] {
+                        "StudentID"}, new string[] {
+                        "StudentID"}, "ecefd63e91f24dcfabce8c5eb56dae1c");
+            this.ParentSchool_Teacher = new Stimulsoft.Report.Dictionary.StiDataRelation("Relation10", "School_Teacher", "School_Teacher", this.GetSchoolInfo, this.Teachers, new string[] {
+                        "ID"}, new string[] {
+                        "SchoolID"}, "115a08bbf452449bb2c3a5aca8f2727e");
+            this.ParentClass_Student = new Stimulsoft.Report.Dictionary.StiDataRelation("Relation9", "Class_Student", "Class_Student", this.Classes, this.Students, new string[] {
+                        "ID"}, new string[] {
+                        "ClassID"}, "d034fa0f8ef24e11b303244279744cfd");
+            this.ParentCourse_Mark = new Stimulsoft.Report.Dictionary.StiDataRelation("Relation8", "Course_Mark", "Course_Mark", this.Courses, this.Marks, new string[] {
+                        "ID"}, new string[] {
+                        "CourseID"}, "cebce6d7987d40f691299ecb9859fb0a");
+            this.ParentLesson_Mark = new Stimulsoft.Report.Dictionary.StiDataRelation("Relation7", "Lesson_Mark", "Lesson_Mark", this.Lessons, this.Marks, new string[] {
+                        "ID"}, new string[] {
+                        "LessonID"}, "ecfbd45610ae4d479f13e12be5f9b67c");
+            this.ParentStudent_Mark = new Stimulsoft.Report.Dictionary.StiDataRelation("Relation6", "Student_Mark", "Student_Mark", this.Students, this.Marks, new string[] {
+                        "ID"}, new string[] {
+                        "StudentID"}, "0bdfae04a8fb48d6a3a5a56fd2428ebe");
+            this.ParentTeacher_Lesson = new Stimulsoft.Report.Dictionary.StiDataRelation("Relation5", "Teacher_Lesson", "Teacher_Lesson", this.Teachers, this.Lessons, new string[] {
+                        "ID"}, new string[] {
+                        "TeacherID"}, "df79ec5590b04ee3ae4e31ee5653757b");
+            this.ParentGrade_Lesson = new Stimulsoft.Report.Dictionary.StiDataRelation("Relation4", "Grade_Lesson", "Grade_Lesson", this.Grades, this.Lessons, new string[] {
+                        "ID"}, new string[] {
+                        "GradeID"}, "f72aaba8ff9a4021ad220e4c831163f6");
+            this.ParentSchool_Grade = new Stimulsoft.Report.Dictionary.StiDataRelation("Relation3", "School_Grade", "School_Grade", this.GetSchoolInfo, this.Grades, new string[] {
+                        "ID"}, new string[] {
+                        "SchoolID"}, "685f1af3f45d4627b6dc8a64a64047c1");
+            this.ParentSchool_Course = new Stimulsoft.Report.Dictionary.StiDataRelation("Relation2", "School_Course", "School_Course", this.GetSchoolInfo, this.Courses, new string[] {
+                        "ID"}, new string[] {
+                        "SchoolID"});
+            this.ParentGrade_Class = new Stimulsoft.Report.Dictionary.StiDataRelation("Relation", "Grade_Class", "Grade_Class", this.Grades, this.Classes, new string[] {
+                        "ID"}, new string[] {
+                        "GradeID"}, "8cf188ee6781466693cd59c0f03eaf80");
+            this.Dictionary.Variables.Add(new Stimulsoft.Report.Dictionary.StiVariable("", "SchoolID", "SchoolID", "", typeof(int), "2", false, Stimulsoft.Report.Dictionary.StiVariableInitBy.Value, false, new Stimulsoft.Report.Dictionary.StiDialogInfo(Stimulsoft.Report.Dictionary.StiDateTimeType.Date, "", true, Stimulsoft.Report.Dictionary.StiVariableSortDirection.Asc, new string[0], new string[0], null), "8f31ec6ea2384d3f9f0be5e5be3fca1e", true, Stimulsoft.Report.Dictionary.StiSelectionMode.FromVariable));
+            this.Dictionary.Variables.Add(new Stimulsoft.Report.Dictionary.StiVariable("", "CourseID", "CourseID", "", typeof(int), "1", false, Stimulsoft.Report.Dictionary.StiVariableInitBy.Value, false, new Stimulsoft.Report.Dictionary.StiDialogInfo(Stimulsoft.Report.Dictionary.StiDateTimeType.Date, "", true, Stimulsoft.Report.Dictionary.StiVariableSortDirection.Asc, new string[0], new string[0], null), "6566eb7cf9fd4231a8307cac9ea7bca1", true, Stimulsoft.Report.Dictionary.StiSelectionMode.FromVariable));
+            this.Dictionary.Variables.Add(new Stimulsoft.Report.Dictionary.StiVariable("", "ClassID", "ClassID", "", typeof(int), "1", false, Stimulsoft.Report.Dictionary.StiVariableInitBy.Value, false, new Stimulsoft.Report.Dictionary.StiDialogInfo(Stimulsoft.Report.Dictionary.StiDateTimeType.Date, "", true, Stimulsoft.Report.Dictionary.StiVariableSortDirection.Asc, new string[0], new string[0], null), "ca4348057eca40c4bf7dcd7ff7c02ed5", true, Stimulsoft.Report.Dictionary.StiSelectionMode.FromVariable));
+            this.NeedsCompiling = false;
+            // 
+            // Variables init
+            // 
+            // CheckerInfo: Value SchoolID
+            this.SchoolID = 2;
+            // CheckerInfo: Value CourseID
+            this.CourseID = 1;
+            // CheckerInfo: Value ClassID
+            this.ClassID = 1;
+            this.EngineVersion = Stimulsoft.Report.Engine.StiEngineVersion.EngineV2;
+            this.Key = "e510c0afbbbe40758a9668948ec16fb7";
+            this.ReferencedAssemblies = new string[] {
+                    "System.Dll",
+                    "System.Drawing.Dll",
+                    "System.Windows.Forms.Dll",
+                    "System.Data.Dll",
+                    "System.Xml.Dll",
+                    "Stimulsoft.Controls.Dll",
+                    "Stimulsoft.Base.Dll",
+                    "Stimulsoft.Report.Dll"};
+            this.ReportAlias = "Report";
+            // 
+            // ReportChanged
+            // 
+            this.ReportChanged = new DateTime(2022, 7, 17, 12, 38, 19, 7);
+            // 
+            // ReportCreated
+            // 
+            this.ReportCreated = new DateTime(2022, 7, 17, 12, 2, 18, 0);
+            this.ReportFile = "C:\\Users\\20aak\\OneDrive\\Desktop\\Report.mrt";
+            this.ReportGuid = "2aa46e81af574f30875b3b2c39d4933a";
+            this.ReportName = "Report";
+            this.ReportUnit = Stimulsoft.Report.StiReportUnitType.Inches;
+            this.ReportVersion = "2022.1.1.0";
+            this.ScriptLanguage = Stimulsoft.Report.StiReportLanguageType.CSharp;
+            // 
+            // Page1
+            // 
+            this.Page1 = new Stimulsoft.Report.Components.StiPage();
+            this.Page1.Guid = "693388e02eb94a98b89dddb78c2f375c";
+            this.Page1.Name = "Page1";
+            this.Page1.PageHeight = 11.69;
+            this.Page1.PageWidth = 8.27;
+            this.Page1.PaperSize = System.Drawing.Printing.PaperKind.A4;
+            this.Page1.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 2, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Page1.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            // 
+            // DataBand1
+            // 
+            this.DataBand1 = new Stimulsoft.Report.Components.StiDataBand();
+            this.DataBand1.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(0, 0.2, 7.87, 1.3);
+            this.DataBand1.DataSourceName = "Students";
+            this.DataBand1.Name = "DataBand1";
+            this.DataBand1.Sort = new string[0];
+            this.DataBand1.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.DataBand1.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            // 
+            // Panel1
+            // 
+            this.Panel1 = new Stimulsoft.Report.Components.StiPanel();
+            this.Panel1.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(0, 0, 5.8, 1.2);
+            this.Panel1.Name = "Panel1";
+            this.Panel1.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.All, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Panel1.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            // 
+            // Image1
+            // 
+            this.Image1 = new Stimulsoft.Report.Components.StiImage();
+            this.Image1.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(0.1, 0.1, 1, 1);
+            this.Image1.IconColor = System.Drawing.Color.FromArgb(255, 68, 114, 196);
+            this.Image1.GetImageData += new Stimulsoft.Report.Events.StiGetImageDataEventHandler(this.Image1__GetImageData);
+            this.Image1.Name = "Image1";
+            this.Image1.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Image1.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Image1.ImageBytes = null;
+            this.Image1.Interaction = null;
+            this.Image1.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            // 
+            // Text1
+            // 
+            this.Text1 = new Stimulsoft.Report.Components.StiText();
+            this.Text1.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(4.9, 0, 0.8, 0.3);
+            this.Text1.Name = "Text1";
+            this.Text1.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text1__GetValue);
+            this.Text1.Type = Stimulsoft.Report.Components.StiSystemTextType.Expression;
+            this.Text1.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text1.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text1.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text1.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text1.Indicator = null;
+            this.Text1.Interaction = null;
+            this.Text1.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text1.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text1.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text2
+            // 
+            this.Text2 = new Stimulsoft.Report.Components.StiText();
+            this.Text2.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(4.9, 0.3, 0.8, 0.3);
+            this.Text2.Name = "Text2";
+            this.Text2.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text2__GetValue);
+            this.Text2.Type = Stimulsoft.Report.Components.StiSystemTextType.Expression;
+            this.Text2.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text2.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text2.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text2.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text2.Indicator = null;
+            this.Text2.Interaction = null;
+            this.Text2.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text2.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text2.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text3
+            // 
+            this.Text3 = new Stimulsoft.Report.Components.StiText();
+            this.Text3.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(4.9, 0.6, 0.8, 0.3);
+            this.Text3.Name = "Text3";
+            this.Text3.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text3__GetValue);
+            this.Text3.Type = Stimulsoft.Report.Components.StiSystemTextType.Expression;
+            this.Text3.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text3.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text3.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text3.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text3.Indicator = null;
+            this.Text3.Interaction = null;
+            this.Text3.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text3.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text3.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text4
+            // 
+            this.Text4 = new Stimulsoft.Report.Components.StiText();
+            this.Text4.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(4.9, 0.9, 0.8, 0.3);
+            this.Text4.Name = "Text4";
+            this.Text4.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text4__GetValue);
+            this.Text4.Type = Stimulsoft.Report.Components.StiSystemTextType.Expression;
+            this.Text4.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text4.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text4.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text4.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text4.Indicator = null;
+            this.Text4.Interaction = null;
+            this.Text4.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text4.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text4.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text5
+            // 
+            this.Text5 = new Stimulsoft.Report.Components.StiText();
+            this.Text5.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(3.4, 0, 1.5, 0.3);
+            this.Text5.Name = "Text5";
+            this.Text5.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text5__GetValue);
+            this.Text5.Type = Stimulsoft.Report.Components.StiSystemTextType.DataColumn;
+            this.Text5.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text5.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text5.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text5.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text5.Indicator = null;
+            this.Text5.Interaction = null;
+            this.Text5.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text5.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text5.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text6
+            // 
+            this.Text6 = new Stimulsoft.Report.Components.StiText();
+            this.Text6.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(3.4, 0.3, 1.5, 0.3);
+            this.Text6.Name = "Text6";
+            this.Text6.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text6__GetValue);
+            this.Text6.Type = Stimulsoft.Report.Components.StiSystemTextType.DataColumn;
+            this.Text6.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text6.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text6.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text6.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text6.Indicator = null;
+            this.Text6.Interaction = null;
+            this.Text6.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text6.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text6.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text7
+            // 
+            this.Text7 = new Stimulsoft.Report.Components.StiText();
+            this.Text7.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(3.4, 0.6, 1.5, 0.3);
+            this.Text7.Name = "Text7";
+            this.Text7.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text7__GetValue);
+            this.Text7.Type = Stimulsoft.Report.Components.StiSystemTextType.DataColumn;
+            this.Text7.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text7.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text7.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text7.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text7.Indicator = null;
+            this.Text7.Interaction = null;
+            this.Text7.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text7.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text7.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text8
+            // 
+            this.Text8 = new Stimulsoft.Report.Components.StiText();
+            this.Text8.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(3.4, 0.9, 1.5, 0.3);
+            this.Text8.Name = "Text8";
+            this.Text8.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text8__GetValue);
+            this.Text8.Type = Stimulsoft.Report.Components.StiSystemTextType.DataColumn;
+            this.Text8.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text8.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text8.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text8.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text8.Indicator = null;
+            this.Text8.Interaction = null;
+            this.Text8.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text8.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text8.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text9
+            // 
+            this.Text9 = new Stimulsoft.Report.Components.StiText();
+            this.Text9.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(2.6, 0, 0.8, 0.3);
+            this.Text9.Name = "Text9";
+            this.Text9.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text9__GetValue);
+            this.Text9.Type = Stimulsoft.Report.Components.StiSystemTextType.Expression;
+            this.Text9.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text9.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text9.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text9.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text9.Indicator = null;
+            this.Text9.Interaction = null;
+            this.Text9.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text9.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text9.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text10
+            // 
+            this.Text10 = new Stimulsoft.Report.Components.StiText();
+            this.Text10.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(1.2, 0, 1.4, 0.3);
+            this.Text10.Name = "Text10";
+            this.Text10.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text10__GetValue);
+            this.Text10.Type = Stimulsoft.Report.Components.StiSystemTextType.Expression;
+            this.Text10.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text10.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text10.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text10.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text10.Indicator = null;
+            this.Text10.Interaction = null;
+            this.Text10.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text10.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text10.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text11
+            // 
+            this.Text11 = new Stimulsoft.Report.Components.StiText();
+            this.Text11.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(2.6, 0.3, 0.8, 0.3);
+            this.Text11.Name = "Text11";
+            this.Text11.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text11__GetValue);
+            this.Text11.Type = Stimulsoft.Report.Components.StiSystemTextType.Expression;
+            this.Text11.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text11.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text11.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text11.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text11.Indicator = null;
+            this.Text11.Interaction = null;
+            this.Text11.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text11.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text11.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text12
+            // 
+            this.Text12 = new Stimulsoft.Report.Components.StiText();
+            this.Text12.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(1.2, 0.3, 1.4, 0.3);
+            this.Text12.Name = "Text12";
+            this.Text12.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text12__GetValue);
+            this.Text12.Type = Stimulsoft.Report.Components.StiSystemTextType.DataColumn;
+            this.Text12.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text12.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text12.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text12.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text12.Indicator = null;
+            this.Text12.Interaction = null;
+            this.Text12.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text12.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text12.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text13
+            // 
+            this.Text13 = new Stimulsoft.Report.Components.StiText();
+            this.Text13.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(2.6, 0.6, 0.8, 0.3);
+            this.Text13.Name = "Text13";
+            this.Text13.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text13__GetValue);
+            this.Text13.Type = Stimulsoft.Report.Components.StiSystemTextType.Expression;
+            this.Text13.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text13.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text13.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text13.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text13.Indicator = null;
+            this.Text13.Interaction = null;
+            this.Text13.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text13.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text13.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text16
+            // 
+            this.Text16 = new Stimulsoft.Report.Components.StiText();
+            this.Text16.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(1.2, 0.6, 1.4, 0.3);
+            this.Text16.Name = "Text16";
+            this.Text16.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text16__GetValue);
+            this.Text16.Type = Stimulsoft.Report.Components.StiSystemTextType.DataColumn;
+            this.Text16.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text16.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text16.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text16.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text16.Indicator = null;
+            this.Text16.Interaction = null;
+            this.Text16.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text16.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text16.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            this.Panel1.Interaction = null;
+            // 
+            // Panel2
+            // 
+            this.Panel2 = new Stimulsoft.Report.Components.StiPanel();
+            this.Panel2.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(5.9, 0, 1.9, 1.2);
+            this.Panel2.Name = "Panel2";
+            this.Panel2.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.All, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Panel2.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            // 
+            // Text14
+            // 
+            this.Text14 = new Stimulsoft.Report.Components.StiText();
+            this.Text14.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(0, 0, 1.9, 0.3);
+            this.Text14.HorAlignment = Stimulsoft.Base.Drawing.StiTextHorAlignment.Center;
+            this.Text14.Name = "Text14";
+            this.Text14.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text14__GetValue);
+            this.Text14.Type = Stimulsoft.Report.Components.StiSystemTextType.Expression;
+            this.Text14.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text14.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text14.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text14.Font = new System.Drawing.Font("P - IRAN Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.Text14.Indicator = null;
+            this.Text14.Interaction = null;
+            this.Text14.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text14.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text14.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text15
+            // 
+            this.Text15 = new Stimulsoft.Report.Components.StiText();
+            this.Text15.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(0, 0.3, 1.9, 0.3);
+            this.Text15.HorAlignment = Stimulsoft.Base.Drawing.StiTextHorAlignment.Center;
+            this.Text15.Name = "Text15";
+            this.Text15.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text15__GetValue);
+            this.Text15.Type = Stimulsoft.Report.Components.StiSystemTextType.Expression;
+            this.Text15.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text15.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text15.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text15.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text15.Indicator = null;
+            this.Text15.Interaction = null;
+            this.Text15.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text15.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text15.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text17
+            // 
+            this.Text17 = new Stimulsoft.Report.Components.StiText();
+            this.Text17.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(0, 0.6, 1.9, 0.3);
+            this.Text17.HorAlignment = Stimulsoft.Base.Drawing.StiTextHorAlignment.Center;
+            this.Text17.Name = "Text17";
+            this.Text17.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text17__GetValue);
+            this.Text17.Type = Stimulsoft.Report.Components.StiSystemTextType.Expression;
+            this.Text17.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text17.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text17.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text17.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text17.Indicator = null;
+            this.Text17.Interaction = null;
+            this.Text17.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text17.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text17.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text18
+            // 
+            this.Text18 = new Stimulsoft.Report.Components.StiText();
+            this.Text18.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(0, 0.9, 1.9, 0.3);
+            this.Text18.HorAlignment = Stimulsoft.Base.Drawing.StiTextHorAlignment.Center;
+            this.Text18.Name = "Text18";
+            this.Text18.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text18__GetValue);
+            this.Text18.Type = Stimulsoft.Report.Components.StiSystemTextType.DataColumn;
+            this.Text18.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text18.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text18.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text18.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text18.Indicator = null;
+            this.Text18.Interaction = null;
+            this.Text18.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text18.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text18.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            this.Panel2.Interaction = null;
+            this.DataBand1.DataRelationName = null;
+            this.DataBand1.Interaction = null;
+            // 
+            // ColumnHeaderBand1
+            // 
+            this.ColumnHeaderBand1 = new Stimulsoft.Report.Components.StiColumnHeaderBand();
+            this.ColumnHeaderBand1.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(0, 1.9, 7.87, 0.3);
+            this.ColumnHeaderBand1.Name = "ColumnHeaderBand1";
+            this.ColumnHeaderBand1.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.ColumnHeaderBand1.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            // 
+            // Text19
+            // 
+            this.Text19 = new Stimulsoft.Report.Components.StiText();
+            this.Text19.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(7.4, 0, 0.4, 0.3);
+            this.Text19.HorAlignment = Stimulsoft.Base.Drawing.StiTextHorAlignment.Center;
+            this.Text19.Name = "Text19";
+            this.Text19.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text19__GetValue);
+            this.Text19.Type = Stimulsoft.Report.Components.StiSystemTextType.Expression;
+            this.Text19.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text19.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.All, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text19.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text19.Font = new System.Drawing.Font("P - IRAN Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.Text19.Indicator = null;
+            this.Text19.Interaction = null;
+            this.Text19.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text19.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text19.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text20
+            // 
+            this.Text20 = new Stimulsoft.Report.Components.StiText();
+            this.Text20.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(4.2, 0, 3.2, 0.3);
+            this.Text20.HorAlignment = Stimulsoft.Base.Drawing.StiTextHorAlignment.Center;
+            this.Text20.Name = "Text20";
+            this.Text20.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text20__GetValue);
+            this.Text20.Type = Stimulsoft.Report.Components.StiSystemTextType.Expression;
+            this.Text20.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text20.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.All, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text20.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text20.Font = new System.Drawing.Font("P - IRAN Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.Text20.Indicator = null;
+            this.Text20.Interaction = null;
+            this.Text20.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text20.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text20.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text21
+            // 
+            this.Text21 = new Stimulsoft.Report.Components.StiText();
+            this.Text21.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(3.5, 0, 0.7, 0.3);
+            this.Text21.HorAlignment = Stimulsoft.Base.Drawing.StiTextHorAlignment.Center;
+            this.Text21.Name = "Text21";
+            this.Text21.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text21__GetValue);
+            this.Text21.Type = Stimulsoft.Report.Components.StiSystemTextType.Expression;
+            this.Text21.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text21.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.All, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text21.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text21.Font = new System.Drawing.Font("P - IRAN Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.Text21.Indicator = null;
+            this.Text21.Interaction = null;
+            this.Text21.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text21.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text21.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text22
+            // 
+            this.Text22 = new Stimulsoft.Report.Components.StiText();
+            this.Text22.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(1.5, 0, 2, 0.3);
+            this.Text22.HorAlignment = Stimulsoft.Base.Drawing.StiTextHorAlignment.Center;
+            this.Text22.Name = "Text22";
+            this.Text22.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text22__GetValue);
+            this.Text22.Type = Stimulsoft.Report.Components.StiSystemTextType.Expression;
+            this.Text22.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text22.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.All, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text22.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text22.Font = new System.Drawing.Font("P - IRAN Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.Text22.Indicator = null;
+            this.Text22.Interaction = null;
+            this.Text22.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text22.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text22.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text23
+            // 
+            this.Text23 = new Stimulsoft.Report.Components.StiText();
+            this.Text23.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(0.8, 0, 0.7, 0.3);
+            this.Text23.HorAlignment = Stimulsoft.Base.Drawing.StiTextHorAlignment.Center;
+            this.Text23.Name = "Text23";
+            this.Text23.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text23__GetValue);
+            this.Text23.Type = Stimulsoft.Report.Components.StiSystemTextType.Expression;
+            this.Text23.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text23.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.All, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text23.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text23.Font = new System.Drawing.Font("P - IRAN Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.Text23.Indicator = null;
+            this.Text23.Interaction = null;
+            this.Text23.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text23.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text23.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text24
+            // 
+            this.Text24 = new Stimulsoft.Report.Components.StiText();
+            this.Text24.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(0, 0, 0.8, 0.3);
+            this.Text24.HorAlignment = Stimulsoft.Base.Drawing.StiTextHorAlignment.Center;
+            this.Text24.Name = "Text24";
+            this.Text24.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text24__GetValue);
+            this.Text24.Type = Stimulsoft.Report.Components.StiSystemTextType.Expression;
+            this.Text24.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text24.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.All, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text24.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text24.Font = new System.Drawing.Font("P - IRAN Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.Text24.Indicator = null;
+            this.Text24.Interaction = null;
+            this.Text24.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text24.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text24.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            this.ColumnHeaderBand1.Interaction = null;
+            // 
+            // DataBand2
+            // 
+            this.DataBand2 = new Stimulsoft.Report.Components.StiDataBand();
+            this.DataBand2.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(0, 2.6, 7.87, 0.3);
+            this.DataBand2.DataRelationName = "Relation6";
+            this.DataBand2.DataSourceName = "Marks";
+            this.DataBand2.Name = "DataBand2";
+            this.DataBand2.Sort = new string[0];
+            this.DataBand2.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.DataBand2.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            // 
+            // Text25
+            // 
+            this.Text25 = new Stimulsoft.Report.Components.StiText();
+            this.Text25.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(7.4, 0, 0.4, 0.3);
+            this.Text25.HorAlignment = Stimulsoft.Base.Drawing.StiTextHorAlignment.Center;
+            this.Text25.Name = "Text25";
+            this.Text25.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text25__GetValue);
+            this.Text25.Type = Stimulsoft.Report.Components.StiSystemTextType.SystemVariables;
+            this.Text25.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text25.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.All, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text25.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text25.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text25.Indicator = null;
+            this.Text25.Interaction = null;
+            this.Text25.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text25.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text25.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text26
+            // 
+            this.Text26 = new Stimulsoft.Report.Components.StiText();
+            this.Text26.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(4.2, 0, 3.2, 0.3);
+            this.Text26.HorAlignment = Stimulsoft.Base.Drawing.StiTextHorAlignment.Center;
+            this.Text26.Name = "Text26";
+            this.Text26.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text26__GetValue);
+            this.Text26.Type = Stimulsoft.Report.Components.StiSystemTextType.DataColumn;
+            this.Text26.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text26.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.All, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text26.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text26.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text26.Indicator = null;
+            this.Text26.Interaction = null;
+            this.Text26.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text26.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text26.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text27
+            // 
+            this.Text27 = new Stimulsoft.Report.Components.StiText();
+            this.Text27.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(3.5, 0, 0.7, 0.3);
+            this.Text27.HorAlignment = Stimulsoft.Base.Drawing.StiTextHorAlignment.Center;
+            this.Text27.Name = "Text27";
+            this.Text27.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text27__GetValue);
+            this.Text27.Type = Stimulsoft.Report.Components.StiSystemTextType.DataColumn;
+            this.Text27.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text27.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.All, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text27.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text27.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text27.Indicator = null;
+            this.Text27.Interaction = null;
+            this.Text27.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text27.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text27.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text28
+            // 
+            this.Text28 = new Stimulsoft.Report.Components.StiText();
+            this.Text28.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(1.5, 0, 2, 0.3);
+            this.Text28.HorAlignment = Stimulsoft.Base.Drawing.StiTextHorAlignment.Center;
+            this.Text28.Name = "Text28";
+            this.Text28.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text28__GetValue);
+            this.Text28.Type = Stimulsoft.Report.Components.StiSystemTextType.Expression;
+            this.Text28.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text28.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.All, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text28.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text28.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text28.Indicator = null;
+            this.Text28.Interaction = null;
+            this.Text28.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text28.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text28.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text29
+            // 
+            this.Text29 = new Stimulsoft.Report.Components.StiText();
+            this.Text29.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(0.8, 0, 0.7, 0.3);
+            this.Text29.HorAlignment = Stimulsoft.Base.Drawing.StiTextHorAlignment.Center;
+            this.Text29.Name = "Text29";
+            this.Text29.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text29__GetValue);
+            this.Text29.Type = Stimulsoft.Report.Components.StiSystemTextType.DataColumn;
+            this.Text29.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text29.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.All, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text29.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text29.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text29.Indicator = null;
+            this.Text29.Interaction = null;
+            this.Text29.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text29.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text29.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            // 
+            // Text30
+            // 
+            this.Text30 = new Stimulsoft.Report.Components.StiText();
+            this.Text30.ClientRectangle = new Stimulsoft.Base.Drawing.RectangleD(0, 0, 0.8, 0.3);
+            this.Text30.HorAlignment = Stimulsoft.Base.Drawing.StiTextHorAlignment.Center;
+            this.Text30.Name = "Text30";
+            this.Text30.GetValue += new Stimulsoft.Report.Events.StiGetValueEventHandler(this.Text30__GetValue);
+            this.Text30.Type = Stimulsoft.Report.Components.StiSystemTextType.DataColumn;
+            this.Text30.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center;
+            this.Text30.Border = new Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.All, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, false, 4, new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black), false);
+            this.Text30.Brush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent);
+            this.Text30.Font = new System.Drawing.Font("P - IRAN Sans", 12F);
+            this.Text30.Indicator = null;
+            this.Text30.Interaction = null;
+            this.Text30.Margins = new Stimulsoft.Report.Components.StiMargins(0, 0, 0, 0);
+            this.Text30.TextBrush = new Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black);
+            this.Text30.TextOptions = new Stimulsoft.Base.Drawing.StiTextOptions(true, false, false, 0F, System.Drawing.Text.HotkeyPrefix.None, System.Drawing.StringTrimming.None);
+            this.DataBand2.Interaction = null;
+            this.Page1.Interaction = null;
+            this.Page1.Margins = new Stimulsoft.Report.Components.StiMargins(0.2, 0.2, 0.2, 0.2);
+            this.Page1.Report = this;
+            this.DataBand1.Page = this.Page1;
+            this.DataBand1.Parent = this.Page1;
+            this.Panel1.Page = this.Page1;
+            this.Panel1.Parent = this.DataBand1;
+            this.Image1.Page = this.Page1;
+            this.Image1.Parent = this.Panel1;
+            this.Text1.Page = this.Page1;
+            this.Text1.Parent = this.Panel1;
+            this.Text2.Page = this.Page1;
+            this.Text2.Parent = this.Panel1;
+            this.Text3.Page = this.Page1;
+            this.Text3.Parent = this.Panel1;
+            this.Text4.Page = this.Page1;
+            this.Text4.Parent = this.Panel1;
+            this.Text5.Page = this.Page1;
+            this.Text5.Parent = this.Panel1;
+            this.Text6.Page = this.Page1;
+            this.Text6.Parent = this.Panel1;
+            this.Text7.Page = this.Page1;
+            this.Text7.Parent = this.Panel1;
+            this.Text8.Page = this.Page1;
+            this.Text8.Parent = this.Panel1;
+            this.Text9.Page = this.Page1;
+            this.Text9.Parent = this.Panel1;
+            this.Text10.Page = this.Page1;
+            this.Text10.Parent = this.Panel1;
+            this.Text11.Page = this.Page1;
+            this.Text11.Parent = this.Panel1;
+            this.Text12.Page = this.Page1;
+            this.Text12.Parent = this.Panel1;
+            this.Text13.Page = this.Page1;
+            this.Text13.Parent = this.Panel1;
+            this.Text16.Page = this.Page1;
+            this.Text16.Parent = this.Panel1;
+            this.Panel2.Page = this.Page1;
+            this.Panel2.Parent = this.DataBand1;
+            this.Text14.Page = this.Page1;
+            this.Text14.Parent = this.Panel2;
+            this.Text15.Page = this.Page1;
+            this.Text15.Parent = this.Panel2;
+            this.Text17.Page = this.Page1;
+            this.Text17.Parent = this.Panel2;
+            this.Text18.Page = this.Page1;
+            this.Text18.Parent = this.Panel2;
+            this.ColumnHeaderBand1.Page = this.Page1;
+            this.ColumnHeaderBand1.Parent = this.Page1;
+            this.Text19.Page = this.Page1;
+            this.Text19.Parent = this.ColumnHeaderBand1;
+            this.Text20.Page = this.Page1;
+            this.Text20.Parent = this.ColumnHeaderBand1;
+            this.Text21.Page = this.Page1;
+            this.Text21.Parent = this.ColumnHeaderBand1;
+            this.Text22.Page = this.Page1;
+            this.Text22.Parent = this.ColumnHeaderBand1;
+            this.Text23.Page = this.Page1;
+            this.Text23.Parent = this.ColumnHeaderBand1;
+            this.Text24.Page = this.Page1;
+            this.Text24.Parent = this.ColumnHeaderBand1;
+            this.DataBand2.MasterComponent = this.DataBand1;
+            this.DataBand2.Page = this.Page1;
+            this.DataBand2.Parent = this.Page1;
+            this.Text25.Page = this.Page1;
+            this.Text25.Parent = this.DataBand2;
+            this.Text26.Page = this.Page1;
+            this.Text26.Parent = this.DataBand2;
+            this.Text27.Page = this.Page1;
+            this.Text27.Parent = this.DataBand2;
+            this.Text28.Page = this.Page1;
+            this.Text28.Parent = this.DataBand2;
+            this.Text29.Page = this.Page1;
+            this.Text29.Parent = this.DataBand2;
+            this.Text30.Page = this.Page1;
+            this.Text30.Parent = this.DataBand2;
+            this.EndRender += new System.EventHandler(this.CheckEndRenderRuntimes__EndRender);
+            // 
+            // Add to Panel1.Components
+            // 
+            this.Panel1.Components.Clear();
+            this.Panel1.Components.AddRange(new Stimulsoft.Report.Components.StiComponent[] {
+                        this.Image1,
+                        this.Text1,
+                        this.Text2,
+                        this.Text3,
+                        this.Text4,
+                        this.Text5,
+                        this.Text6,
+                        this.Text7,
+                        this.Text8,
+                        this.Text9,
+                        this.Text10,
+                        this.Text11,
+                        this.Text12,
+                        this.Text13,
+                        this.Text16});
+            // 
+            // Add to Panel2.Components
+            // 
+            this.Panel2.Components.Clear();
+            this.Panel2.Components.AddRange(new Stimulsoft.Report.Components.StiComponent[] {
+                        this.Text14,
+                        this.Text15,
+                        this.Text17,
+                        this.Text18});
+            // 
+            // Add to DataBand1.Components
+            // 
+            this.DataBand1.Components.Clear();
+            this.DataBand1.Components.AddRange(new Stimulsoft.Report.Components.StiComponent[] {
+                        this.Panel1,
+                        this.Panel2});
+            // 
+            // Add to ColumnHeaderBand1.Components
+            // 
+            this.ColumnHeaderBand1.Components.Clear();
+            this.ColumnHeaderBand1.Components.AddRange(new Stimulsoft.Report.Components.StiComponent[] {
+                        this.Text19,
+                        this.Text20,
+                        this.Text21,
+                        this.Text22,
+                        this.Text23,
+                        this.Text24});
+            // 
+            // Add to DataBand2.Components
+            // 
+            this.DataBand2.Components.Clear();
+            this.DataBand2.Components.AddRange(new Stimulsoft.Report.Components.StiComponent[] {
+                        this.Text25,
+                        this.Text26,
+                        this.Text27,
+                        this.Text28,
+                        this.Text29,
+                        this.Text30});
+            // 
+            // Add to Page1.Components
+            // 
+            this.Page1.Components.Clear();
+            this.Page1.Components.AddRange(new Stimulsoft.Report.Components.StiComponent[] {
+                        this.DataBand1,
+                        this.ColumnHeaderBand1,
+                        this.DataBand2});
+            // 
+            // Add to Pages
+            // 
+            this.Pages.Clear();
+            this.Pages.AddRange(new Stimulsoft.Report.Components.StiPage[] {
+                        this.Page1});
+            this.Dictionary.Relations.Add(this.ParentGrade_Class);
+            this.Dictionary.Relations.Add(this.ParentSchool_Course);
+            this.Dictionary.Relations.Add(this.ParentSchool_Grade);
+            this.Dictionary.Relations.Add(this.ParentGrade_Lesson);
+            this.Dictionary.Relations.Add(this.ParentTeacher_Lesson);
+            this.Dictionary.Relations.Add(this.ParentStudent_Mark);
+            this.Dictionary.Relations.Add(this.ParentLesson_Mark);
+            this.Dictionary.Relations.Add(this.ParentCourse_Mark);
+            this.Dictionary.Relations.Add(this.ParentClass_Student);
+            this.Dictionary.Relations.Add(this.ParentSchool_Teacher);
+            this.Dictionary.Relations.Add(this.ParentRanksAveragesInGrade_Mark);
+            this.Classes.Columns.AddRange(new Stimulsoft.Report.Dictionary.StiDataColumn[] {
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("ID", "ID", "ID", typeof(int), "963350952ccb432fb72e5b0b877acd26"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("Name", "Name", "Name", typeof(string), "0527d63a7fb24eee968b701ce18f8566"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("GradeID", "GradeID", "GradeID", typeof(int), "b94b903e0ea342739f9b3c1f6a57607a")});
+            this.Classes.Parameters.AddRange(new Stimulsoft.Report.Dictionary.StiDataParameter[] {
+                        new Stimulsoft.Report.Dictionary.StiDataParameter("@classid", 8, 0, null)});
+            this.DataSources.Add(this.Classes);
+            this.Courses.Columns.AddRange(new Stimulsoft.Report.Dictionary.StiDataColumn[] {
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("ID", "ID", "ID", typeof(int), null),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("Month", "Month", "Month", typeof(string), null),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("Year", "Year", "Year", typeof(string), null),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("SchoolID", "SchoolID", "SchoolID", typeof(int), null)});
+            this.Courses.Parameters.AddRange(new Stimulsoft.Report.Dictionary.StiDataParameter[] {
+                        new Stimulsoft.Report.Dictionary.StiDataParameter("@courseid", 8, 0, null)});
+            this.DataSources.Add(this.Courses);
+            this.Grades.Columns.AddRange(new Stimulsoft.Report.Dictionary.StiDataColumn[] {
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("ID", "ID", "ID", typeof(int), "9286068dfc8b460a889ab3d6a15901dd"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("Name", "Name", "Name", typeof(string), "ccb27f1cf72d428db8edaeb73f24d886"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("SchoolID", "SchoolID", "SchoolID", typeof(int), "705301c06490457b8b97dee6772014c5")});
+            this.Grades.Parameters.AddRange(new Stimulsoft.Report.Dictionary.StiDataParameter[] {
+                        new Stimulsoft.Report.Dictionary.StiDataParameter("@schoolid", 8, 0, null)});
+            this.DataSources.Add(this.Grades);
+            this.Lessons.Columns.AddRange(new Stimulsoft.Report.Dictionary.StiDataColumn[] {
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("ID", "ID", "ID", typeof(int), "8bd987a407474b958e0b57a2d4bd75aa"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("Name", "Name", "Name", typeof(string), "82432291d08b4c9cab3d7224db36b9d5"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("NumberOfUnits", "NumberOfUnits", "NumberOfUnits", typeof(int), "ac729a6925cc4ed4a93c83abc02e4514"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("GradeID", "GradeID", "GradeID", typeof(int), "ab11f4a1439a4b169d8dd16d0ca2ad34"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("TeacherID", "TeacherID", "TeacherID", typeof(int), "ad479ac2a97743f6b9cf6a71e34ba2e2")});
+            this.DataSources.Add(this.Lessons);
+            this.Marks.Columns.AddRange(new Stimulsoft.Report.Dictionary.StiDataColumn[] {
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("StudentID", "StudentID", "StudentID", typeof(int), "0f16ffc84718400cb8215cf57eb4ff1c"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("LessonID", "LessonID", "LessonID", typeof(int), "0fea09d4945348488fe85a4788f9e601"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("CourseID", "CourseID", "CourseID", typeof(int), "40393a1ec34a4568934491ebe86cc044"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("Value", "Value", "Value", typeof(float), "c1e0284004bb444c9fdcebc831549647")});
+            this.Marks.Parameters.AddRange(new Stimulsoft.Report.Dictionary.StiDataParameter[] {
+                        new Stimulsoft.Report.Dictionary.StiDataParameter("@courseid", 8, 0, null)});
+            this.DataSources.Add(this.Marks);
+            this.Students.Columns.AddRange(new Stimulsoft.Report.Dictionary.StiDataColumn[] {
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("ID", "ID", "ID", typeof(int), "d1fa92aea0b34906ad5d288d0be49ec7"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("Firstname", "Firstname", "Firstname", typeof(string), "91235c45fb454a55aa0642a1e79ee377"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("Lastname", "Lastname", "Lastname", typeof(string), "91dd019643984796aee9d6c630935fa0"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("NationalCode", "NationalCode", "NationalCode", typeof(string), "37f4cae5592a49fba33b55808a3d2a6d"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("ClassID", "ClassID", "ClassID", typeof(int), "dd92d504e29f4296bdca499680dd0d45"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("PhotoAddress", "PhotoAddress", "PhotoAddress", typeof(string), "01db9e02937145f0b704a8a23501f45c"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("Fathername", "Fathername", "Fathername", typeof(string), "2ab3ce2baefc4e39b861892421db89bd")});
+            this.Students.Parameters.AddRange(new Stimulsoft.Report.Dictionary.StiDataParameter[] {
+                        new Stimulsoft.Report.Dictionary.StiDataParameter("@classid", 8, 0, null)});
+            this.DataSources.Add(this.Students);
+            this.Teachers.Columns.AddRange(new Stimulsoft.Report.Dictionary.StiDataColumn[] {
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("ID", "ID", "ID", typeof(int), "036826fe30764355961e7c87e9576f8d"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("Firstname", "Firstname", "Firstname", typeof(string), "9d7aad04096445cc9b530951840decba"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("Lastname", "Lastname", "Lastname", typeof(string), "2637b6dc230a46a79e408227ba4c0a5c"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("SchoolID", "SchoolID", "SchoolID", typeof(int), "a3e8957316b44199b4817d63e311a1a0")});
+            this.Teachers.Parameters.AddRange(new Stimulsoft.Report.Dictionary.StiDataParameter[] {
+                        new Stimulsoft.Report.Dictionary.StiDataParameter("@schoolid", 8, 0, null)});
+            this.DataSources.Add(this.Teachers);
+            this.GetSchoolInfo.Columns.AddRange(new Stimulsoft.Report.Dictionary.StiDataColumn[] {
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("ID", "ID", "ID", typeof(int), "152a2871caeb441bbd3f643deeb2486c"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("Name", "Name", "Name", typeof(string), "5eeda5c315bc457aad94397cb261f2fd"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("Area", "Area", "Area", typeof(string), "9c376034a64b4233852afb35dea80e84"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("Section", "Section", "Section", typeof(string), "914de168f54e4afba3a2f3409484f020"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("City", "City", "City", typeof(string), "2842f774d7d040cda77d8c80b4a24374"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("Province", "Province", "Province", typeof(string), "b25f62303ab0444bad36a2bc218e8d4a"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("Manager", "Manager", "Manager", typeof(string), "9dd63ea6d1f84a3c934bb134326d15f7"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("Executive", "Executive", "Executive", typeof(string), "22b1e869bce94526af6ba0efb4ee28a8")});
+            this.GetSchoolInfo.Parameters.AddRange(new Stimulsoft.Report.Dictionary.StiDataParameter[] {
+                        new Stimulsoft.Report.Dictionary.StiDataParameter("@schoolid", 8, 0, null)});
+            this.DataSources.Add(this.GetSchoolInfo);
+            this.GetSchoolInfo.Type = Stimulsoft.Report.Dictionary.StiSqlSourceType.StoredProcedure;
+            this.RanksAveragesInGrade.Columns.AddRange(new Stimulsoft.Report.Dictionary.StiDataColumn[] {
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("StudentID", "StudentID", "StudentID", typeof(int), "0345f171f1c34a4db90f766bdd74e493"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("Average", "Average", "Average", typeof(double), "f028ccc76aaf4b8cb1382daa4b2bf87e"),
+                        new Stimulsoft.Report.Dictionary.StiDataColumn("Rank", "Rank", "Rank", typeof(long), "2fc3b297f79f4c97936117947d21a18d")});
+            this.RanksAveragesInGrade.Parameters.AddRange(new Stimulsoft.Report.Dictionary.StiDataParameter[] {
+                        new Stimulsoft.Report.Dictionary.StiDataParameter("@courseid", 8, 0, "6e26291246644ea6bcf026f31bd6fa28"),
+                        new Stimulsoft.Report.Dictionary.StiDataParameter("@gradeid", 8, 0, "bfc642fbb1b446cd9f637d2d1c2587e1")});
+            this.DataSources.Add(this.RanksAveragesInGrade);
+            this.RanksAveragesInGrade.Type = Stimulsoft.Report.Dictionary.StiSqlSourceType.StoredProcedure;
+            this.Dictionary.Databases.Add(new Stimulsoft.Report.Dictionary.StiSqlDatabase("School", "School", "#%#", false, "cb05daf88793465592b455de4940316d"));
+            ((Stimulsoft.Report.Dictionary.StiSqlDatabase)(this.Dictionary.Databases["School"])).ConnectionStringEncrypted = "9FzNSEZKct35CE3M+5iiJ9HIwQ1FV0mka03oROGgaS/fFMvrVlCx3eJGjZzDhKRj3HCrjEUD8plFTyWEaoBte5Bw+6PIV/IJe0FZ3E5MNTvx0PcC2WnDgWlNIWxOhKR7jWCzSVsFGsU=";
+            this.Classes.Connecting += new System.EventHandler(this.GetClasses_SqlCommand);
+            this.Courses.Connecting += new System.EventHandler(this.GetCourses_SqlCommand);
+            this.Grades.Connecting += new System.EventHandler(this.GetGrades_SqlCommand);
+            this.Lessons.Connecting += new System.EventHandler(this.GetLessons_SqlCommand);
+            this.Marks.Connecting += new System.EventHandler(this.GetMarks_SqlCommand);
+            this.Students.Connecting += new System.EventHandler(this.GetStudents_SqlCommand);
+            this.Teachers.Connecting += new System.EventHandler(this.GetTeachers_SqlCommand);
+            this.GetSchoolInfo.Connecting += new System.EventHandler(this.GetGetSchoolInfo_SqlCommand);
+            this.RanksAveragesInGrade.Connecting += new System.EventHandler(this.GetRanksAveragesInGrade_SqlCommand);
+        }
+        
+        public void GetClasses_SqlCommand(object sender, System.EventArgs e)
+        {
+            this.Classes.SqlCommand = "select * from Classes\r\nwhere Classes.ID = @classid;";
+            this.Classes.Parameters["@classid"].ParameterValue = ClassID;
+        }
+        
+        public void GetCourses_SqlCommand(object sender, System.EventArgs e)
+        {
+            this.Courses.SqlCommand = "select * from Courses\r\nwhere Courses.ID = @courseid;";
+            this.Courses.Parameters["@courseid"].ParameterValue = CourseID;
+        }
+        
+        public void GetGrades_SqlCommand(object sender, System.EventArgs e)
+        {
+            this.Grades.SqlCommand = "select * from Grades\r\nwhere Grades.SchoolID = @schoolid;";
+            this.Grades.Parameters["@schoolid"].ParameterValue = SchoolID;
+        }
+        
+        public void GetLessons_SqlCommand(object sender, System.EventArgs e)
+        {
+            this.Lessons.SqlCommand = "select * from Lessons";
+        }
+        
+        public void GetMarks_SqlCommand(object sender, System.EventArgs e)
+        {
+            this.Marks.SqlCommand = "select * from Marks\r\nwhere Marks.CourseID = @courseid";
+            this.Marks.Parameters["@courseid"].ParameterValue = CourseID;
+        }
+        
+        public void GetStudents_SqlCommand(object sender, System.EventArgs e)
+        {
+            this.Students.SqlCommand = "select * from Students\r\nwhere Students.ClassID = @classid;";
+            this.Students.Parameters["@classid"].ParameterValue = ClassID;
+        }
+        
+        public void GetTeachers_SqlCommand(object sender, System.EventArgs e)
+        {
+            this.Teachers.SqlCommand = "select * from Teachers\r\nwhere Teachers.SchoolID = @schoolid;";
+            this.Teachers.Parameters["@schoolid"].ParameterValue = SchoolID;
+        }
+        
+        public void GetGetSchoolInfo_SqlCommand(object sender, System.EventArgs e)
+        {
+            this.GetSchoolInfo.SqlCommand = "GetSchoolInfo";
+            this.GetSchoolInfo.Parameters["@schoolid"].ParameterValue = SchoolID;
+        }
+        
+        public void GetRanksAveragesInGrade_SqlCommand(object sender, System.EventArgs e)
+        {
+            this.RanksAveragesInGrade.SqlCommand = "RanksAveragesInGrade";
+            this.RanksAveragesInGrade.Parameters["@courseid"].ParameterValue = CourseID;
+            this.RanksAveragesInGrade.Parameters["@gradeid"].ParameterValue = Marks.Student_Mark.Class_Student.Grade_Class.ID;
+        }
+        
+        #region Relation ParentGrade_Class
+        public class ParentGrade_ClassRelation : Stimulsoft.Report.Dictionary.StiDataRow
+        {
+            
+            public ParentGrade_ClassRelation(Stimulsoft.Report.Dictionary.StiDataRow dataRow) : 
+                    base(dataRow)
+            {
+            }
+            
+            public virtual int ID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["ID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual string Name
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Name"], typeof(string), true)));
+                }
+            }
+            
+            public virtual int SchoolID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["SchoolID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual ParentSchool_GradeRelation School_Grade
+            {
+                get
+                {
+                    return new ParentSchool_GradeRelation(this.GetParentData("Relation3"));
+                }
+            }
+        }
+        #endregion Relation ParentGrade_Class
+        
+        #region Relation ParentSchool_Course
+        public class ParentSchool_CourseRelation : Stimulsoft.Report.Dictionary.StiDataRow
+        {
+            
+            public ParentSchool_CourseRelation(Stimulsoft.Report.Dictionary.StiDataRow dataRow) : 
+                    base(dataRow)
+            {
+            }
+            
+            public virtual int ID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["ID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual string Name
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Name"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Area
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Area"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Section
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Section"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string City
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["City"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Province
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Province"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Manager
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Manager"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Executive
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Executive"], typeof(string), true)));
+                }
+            }
+        }
+        #endregion Relation ParentSchool_Course
+        
+        #region Relation ParentSchool_Grade
+        public class ParentSchool_GradeRelation : Stimulsoft.Report.Dictionary.StiDataRow
+        {
+            
+            public ParentSchool_GradeRelation(Stimulsoft.Report.Dictionary.StiDataRow dataRow) : 
+                    base(dataRow)
+            {
+            }
+            
+            public virtual int ID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["ID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual string Name
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Name"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Area
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Area"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Section
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Section"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string City
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["City"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Province
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Province"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Manager
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Manager"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Executive
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Executive"], typeof(string), true)));
+                }
+            }
+        }
+        #endregion Relation ParentSchool_Grade
+        
+        #region Relation ParentGrade_Lesson
+        public class ParentGrade_LessonRelation : Stimulsoft.Report.Dictionary.StiDataRow
+        {
+            
+            public ParentGrade_LessonRelation(Stimulsoft.Report.Dictionary.StiDataRow dataRow) : 
+                    base(dataRow)
+            {
+            }
+            
+            public virtual int ID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["ID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual string Name
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Name"], typeof(string), true)));
+                }
+            }
+            
+            public virtual int SchoolID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["SchoolID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual ParentSchool_GradeRelation School_Grade
+            {
+                get
+                {
+                    return new ParentSchool_GradeRelation(this.GetParentData("Relation3"));
+                }
+            }
+        }
+        #endregion Relation ParentGrade_Lesson
+        
+        #region Relation ParentTeacher_Lesson
+        public class ParentTeacher_LessonRelation : Stimulsoft.Report.Dictionary.StiDataRow
+        {
+            
+            public ParentTeacher_LessonRelation(Stimulsoft.Report.Dictionary.StiDataRow dataRow) : 
+                    base(dataRow)
+            {
+            }
+            
+            public virtual int ID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["ID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual string Firstname
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Firstname"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Lastname
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Lastname"], typeof(string), true)));
+                }
+            }
+            
+            public virtual int SchoolID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["SchoolID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual ParentSchool_TeacherRelation School_Teacher
+            {
+                get
+                {
+                    return new ParentSchool_TeacherRelation(this.GetParentData("Relation10"));
+                }
+            }
+        }
+        #endregion Relation ParentTeacher_Lesson
+        
+        #region Relation ParentStudent_Mark
+        public class ParentStudent_MarkRelation : Stimulsoft.Report.Dictionary.StiDataRow
+        {
+            
+            public ParentStudent_MarkRelation(Stimulsoft.Report.Dictionary.StiDataRow dataRow) : 
+                    base(dataRow)
+            {
+            }
+            
+            public virtual int ID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["ID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual string Firstname
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Firstname"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Lastname
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Lastname"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string NationalCode
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["NationalCode"], typeof(string), true)));
+                }
+            }
+            
+            public virtual int ClassID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["ClassID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual string PhotoAddress
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["PhotoAddress"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Fathername
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Fathername"], typeof(string), true)));
+                }
+            }
+            
+            public virtual ParentClass_StudentRelation Class_Student
+            {
+                get
+                {
+                    return new ParentClass_StudentRelation(this.GetParentData("Relation9"));
+                }
+            }
+        }
+        #endregion Relation ParentStudent_Mark
+        
+        #region Relation ParentLesson_Mark
+        public class ParentLesson_MarkRelation : Stimulsoft.Report.Dictionary.StiDataRow
+        {
+            
+            public ParentLesson_MarkRelation(Stimulsoft.Report.Dictionary.StiDataRow dataRow) : 
+                    base(dataRow)
+            {
+            }
+            
+            public virtual int ID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["ID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual string Name
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Name"], typeof(string), true)));
+                }
+            }
+            
+            public virtual int NumberOfUnits
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["NumberOfUnits"], typeof(int), true)));
+                }
+            }
+            
+            public virtual int GradeID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["GradeID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual int TeacherID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["TeacherID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual ParentGrade_LessonRelation Grade_Lesson
+            {
+                get
+                {
+                    return new ParentGrade_LessonRelation(this.GetParentData("Relation4"));
+                }
+            }
+            
+            public virtual ParentTeacher_LessonRelation Teacher_Lesson
+            {
+                get
+                {
+                    return new ParentTeacher_LessonRelation(this.GetParentData("Relation5"));
+                }
+            }
+        }
+        #endregion Relation ParentLesson_Mark
+        
+        #region Relation ParentCourse_Mark
+        public class ParentCourse_MarkRelation : Stimulsoft.Report.Dictionary.StiDataRow
+        {
+            
+            public ParentCourse_MarkRelation(Stimulsoft.Report.Dictionary.StiDataRow dataRow) : 
+                    base(dataRow)
+            {
+            }
+            
+            public virtual int ID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["ID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual string Month
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Month"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Year
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Year"], typeof(string), true)));
+                }
+            }
+            
+            public virtual int SchoolID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["SchoolID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual ParentSchool_CourseRelation School_Course
+            {
+                get
+                {
+                    return new ParentSchool_CourseRelation(this.GetParentData("Relation2"));
+                }
+            }
+        }
+        #endregion Relation ParentCourse_Mark
+        
+        #region Relation ParentClass_Student
+        public class ParentClass_StudentRelation : Stimulsoft.Report.Dictionary.StiDataRow
+        {
+            
+            public ParentClass_StudentRelation(Stimulsoft.Report.Dictionary.StiDataRow dataRow) : 
+                    base(dataRow)
+            {
+            }
+            
+            public virtual int ID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["ID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual string Name
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Name"], typeof(string), true)));
+                }
+            }
+            
+            public virtual int GradeID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["GradeID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual ParentGrade_ClassRelation Grade_Class
+            {
+                get
+                {
+                    return new ParentGrade_ClassRelation(this.GetParentData("Relation"));
+                }
+            }
+        }
+        #endregion Relation ParentClass_Student
+        
+        #region Relation ParentSchool_Teacher
+        public class ParentSchool_TeacherRelation : Stimulsoft.Report.Dictionary.StiDataRow
+        {
+            
+            public ParentSchool_TeacherRelation(Stimulsoft.Report.Dictionary.StiDataRow dataRow) : 
+                    base(dataRow)
+            {
+            }
+            
+            public virtual int ID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["ID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual string Name
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Name"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Area
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Area"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Section
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Section"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string City
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["City"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Province
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Province"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Manager
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Manager"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Executive
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Executive"], typeof(string), true)));
+                }
+            }
+        }
+        #endregion Relation ParentSchool_Teacher
+        
+        #region Relation ParentRanksAveragesInGrade_Mark
+        public class ParentRanksAveragesInGrade_MarkRelation : Stimulsoft.Report.Dictionary.StiDataRow
+        {
+            
+            public ParentRanksAveragesInGrade_MarkRelation(Stimulsoft.Report.Dictionary.StiDataRow dataRow) : 
+                    base(dataRow)
+            {
+            }
+            
+            public virtual int StudentID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["StudentID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual double Average
+            {
+                get
+                {
+                    return ((double)(StiReport.ChangeType(this["Average"], typeof(double), true)));
+                }
+            }
+            
+            public virtual long Rank
+            {
+                get
+                {
+                    return ((long)(StiReport.ChangeType(this["Rank"], typeof(long), true)));
+                }
+            }
+        }
+        #endregion Relation ParentRanksAveragesInGrade_Mark
+        
+        #region DataSource Classes
+        public class ClassesDataSource : Stimulsoft.Report.Dictionary.StiSqlSource
+        {
+            
+            public ClassesDataSource() : 
+                    base("School", "Classes", "Classes", "", true, false, 30, "1209ccc7b50a4032b5c28bb6ae29a4cc")
+            {
+            }
+            
+            public virtual int ID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["ID"], typeof(int), true)));
+                }
+            }
+            
+            public new virtual string Name
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Name"], typeof(string), true)));
+                }
+            }
+            
+            public virtual int GradeID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["GradeID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual ParentGrade_ClassRelation Grade_Class
+            {
+                get
+                {
+                    return new ParentGrade_ClassRelation(this.GetParentData("Relation"));
+                }
+            }
+        }
+        #endregion DataSource Classes
+        
+        #region DataSource Courses
+        public class CoursesDataSource : Stimulsoft.Report.Dictionary.StiSqlSource
+        {
+            
+            public CoursesDataSource() : 
+                    base("School", "Courses", "Courses", "", true, false, 30, "a6924ac280a24a6eac047a3315df0944")
+            {
+            }
+            
+            public virtual int ID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["ID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual string Month
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Month"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Year
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Year"], typeof(string), true)));
+                }
+            }
+            
+            public virtual int SchoolID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["SchoolID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual ParentSchool_CourseRelation School_Course
+            {
+                get
+                {
+                    return new ParentSchool_CourseRelation(this.GetParentData("Relation2"));
+                }
+            }
+        }
+        #endregion DataSource Courses
+        
+        #region DataSource Grades
+        public class GradesDataSource : Stimulsoft.Report.Dictionary.StiSqlSource
+        {
+            
+            public GradesDataSource() : 
+                    base("School", "Grades", "Grades", "", true, false, 30, "bf0b231c764c4ffd8f082efa7cd63c42")
+            {
+            }
+            
+            public virtual int ID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["ID"], typeof(int), true)));
+                }
+            }
+            
+            public new virtual string Name
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Name"], typeof(string), true)));
+                }
+            }
+            
+            public virtual int SchoolID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["SchoolID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual ParentSchool_GradeRelation School_Grade
+            {
+                get
+                {
+                    return new ParentSchool_GradeRelation(this.GetParentData("Relation3"));
+                }
+            }
+        }
+        #endregion DataSource Grades
+        
+        #region DataSource Lessons
+        public class LessonsDataSource : Stimulsoft.Report.Dictionary.StiSqlSource
+        {
+            
+            public LessonsDataSource() : 
+                    base("School", "Lessons", "Lessons", "", true, false, 30, "4e77225702a142b6957d493616d3a0c5")
+            {
+            }
+            
+            public virtual int ID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["ID"], typeof(int), true)));
+                }
+            }
+            
+            public new virtual string Name
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Name"], typeof(string), true)));
+                }
+            }
+            
+            public virtual int NumberOfUnits
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["NumberOfUnits"], typeof(int), true)));
+                }
+            }
+            
+            public virtual int GradeID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["GradeID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual int TeacherID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["TeacherID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual ParentGrade_LessonRelation Grade_Lesson
+            {
+                get
+                {
+                    return new ParentGrade_LessonRelation(this.GetParentData("Relation4"));
+                }
+            }
+            
+            public virtual ParentTeacher_LessonRelation Teacher_Lesson
+            {
+                get
+                {
+                    return new ParentTeacher_LessonRelation(this.GetParentData("Relation5"));
+                }
+            }
+        }
+        #endregion DataSource Lessons
+        
+        #region DataSource Marks
+        public class MarksDataSource : Stimulsoft.Report.Dictionary.StiSqlSource
+        {
+            
+            public MarksDataSource() : 
+                    base("School", "Marks", "Marks", "", true, false, 30, "e56aaa4b8edb46079c6852cc8823ccd3")
+            {
+            }
+            
+            public virtual int StudentID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["StudentID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual int LessonID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["LessonID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual int CourseID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["CourseID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual float Value
+            {
+                get
+                {
+                    return ((float)(StiReport.ChangeType(this["Value"], typeof(float), true)));
+                }
+            }
+            
+            public virtual ParentStudent_MarkRelation Student_Mark
+            {
+                get
+                {
+                    return new ParentStudent_MarkRelation(this.GetParentData("Relation6"));
+                }
+            }
+            
+            public virtual ParentLesson_MarkRelation Lesson_Mark
+            {
+                get
+                {
+                    return new ParentLesson_MarkRelation(this.GetParentData("Relation7"));
+                }
+            }
+            
+            public virtual ParentCourse_MarkRelation Course_Mark
+            {
+                get
+                {
+                    return new ParentCourse_MarkRelation(this.GetParentData("Relation8"));
+                }
+            }
+            
+            public virtual ParentRanksAveragesInGrade_MarkRelation RanksAveragesInGrade_Mark
+            {
+                get
+                {
+                    return new ParentRanksAveragesInGrade_MarkRelation(this.GetParentData("Relation11"));
+                }
+            }
+        }
+        #endregion DataSource Marks
+        
+        #region DataSource Students
+        public class StudentsDataSource : Stimulsoft.Report.Dictionary.StiSqlSource
+        {
+            
+            public StudentsDataSource() : 
+                    base("School", "Students", "Students", "", true, false, 30, "3053a160504b46e4a644cb731d4950d1")
+            {
+            }
+            
+            public virtual int ID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["ID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual string Firstname
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Firstname"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Lastname
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Lastname"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string NationalCode
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["NationalCode"], typeof(string), true)));
+                }
+            }
+            
+            public virtual int ClassID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["ClassID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual string PhotoAddress
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["PhotoAddress"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Fathername
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Fathername"], typeof(string), true)));
+                }
+            }
+            
+            public virtual ParentClass_StudentRelation Class_Student
+            {
+                get
+                {
+                    return new ParentClass_StudentRelation(this.GetParentData("Relation9"));
+                }
+            }
+        }
+        #endregion DataSource Students
+        
+        #region DataSource Teachers
+        public class TeachersDataSource : Stimulsoft.Report.Dictionary.StiSqlSource
+        {
+            
+            public TeachersDataSource() : 
+                    base("School", "Teachers", "Teachers", "", true, false, 30, "271bf3f47fff4d52af50c1b65bfe0bd8")
+            {
+            }
+            
+            public virtual int ID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["ID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual string Firstname
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Firstname"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Lastname
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Lastname"], typeof(string), true)));
+                }
+            }
+            
+            public virtual int SchoolID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["SchoolID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual ParentSchool_TeacherRelation School_Teacher
+            {
+                get
+                {
+                    return new ParentSchool_TeacherRelation(this.GetParentData("Relation10"));
+                }
+            }
+        }
+        #endregion DataSource Teachers
+        
+        #region DataSource GetSchoolInfo
+        public class GetSchoolInfoDataSource : Stimulsoft.Report.Dictionary.StiSqlSource
+        {
+            
+            public GetSchoolInfoDataSource() : 
+                    base("School", "GetSchoolInfo", "GetSchoolInfo", "", true, false, 30, "c57ecc47753f471ab47b50cc752e0859")
+            {
+            }
+            
+            public virtual int ID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["ID"], typeof(int), true)));
+                }
+            }
+            
+            public new virtual string Name
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Name"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Area
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Area"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Section
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Section"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string City
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["City"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Province
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Province"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Manager
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Manager"], typeof(string), true)));
+                }
+            }
+            
+            public virtual string Executive
+            {
+                get
+                {
+                    return ((string)(StiReport.ChangeType(this["Executive"], typeof(string), true)));
+                }
+            }
+        }
+        #endregion DataSource GetSchoolInfo
+        
+        #region DataSource RanksAveragesInGrade
+        public class RanksAveragesInGradeDataSource : Stimulsoft.Report.Dictionary.StiSqlSource
+        {
+            
+            public RanksAveragesInGradeDataSource() : 
+                    base("School", "RanksAveragesInGrade", "RanksAveragesInGrade", "", true, false, 30, "53416e4fb60d4411a492c4f54a1fe778")
+            {
+            }
+            
+            public virtual int StudentID
+            {
+                get
+                {
+                    return ((int)(StiReport.ChangeType(this["StudentID"], typeof(int), true)));
+                }
+            }
+            
+            public virtual double Average
+            {
+                get
+                {
+                    return ((double)(StiReport.ChangeType(this["Average"], typeof(double), true)));
+                }
+            }
+            
+            public virtual long Rank
+            {
+                get
+                {
+                    return ((long)(StiReport.ChangeType(this["Rank"], typeof(long), true)));
+                }
+            }
+        }
+        #endregion DataSource RanksAveragesInGrade
+        #endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>
